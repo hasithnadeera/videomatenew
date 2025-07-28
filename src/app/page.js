@@ -9,7 +9,7 @@ import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
 import PricingSection from "./components/PricingSection";
 import Testimonials from "./components/Testimonials";
-import Guarantee from "./components/Guarantee";
+
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
@@ -30,8 +30,7 @@ export default function Home() {
         <PricingSection />
         <div id="testimonials">
           <Testimonials />
-        </div>
-          <Guarantee />      
+        </div>  
         <div id="FAQ">
           <FAQ/>
         </div>

@@ -24,7 +24,7 @@ export default function FAQ() {
     {
       id: 3,
       question: "Can you do TikToks, Reels, shorts?",
-      answer: "Absolutely. Just say “vertical version” in your brief."
+      answer: "Absolutely. Just say \"vertical version\" in your brief."
     },
     {
       id: 4,
@@ -38,37 +38,58 @@ export default function FAQ() {
   };
 
   return (
-    <section className="py-16 px-4 w-full max-w-6xl mx-auto">
-      <div className="text-center mb-12">
+    <section className="py-16 px-4 w-full max-w-6xl mx-auto relative">
+      {/* Shadow behind the title */}
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+        <div 
+          className="w-300 h-175 rounded-full blur-[200px]" 
+          style={{ 
+            background: '#B47DFF', 
+            opacity: 0.2 
+          }} 
+        ></div>
+      </div>
+
+      <div className="text-center mb-12 relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#B47DFF] to-[#D0AEFF] bg-clip-text text-transparent">
           Zero-Risk Guarantee
         </h2>
         <div className="text-2xl md:text-3xl font-semibold mb-2">
-          14 days of "WOW" or 100% refund
+          14 days of \"WOW\" or 100% refund
         </div>
         <p className="text-lg text-gray-300">
           Stay because you're thrilled—not because you're locked in
         </p>
       </div>
 
-      <div className="max-w-3xl mx-auto space-y-4">
+      <div className="max-w-3xl mx-auto space-y-4 relative z-10">
         {faqItems.map((item) => (
-          <div key={item.id} className="rounded-xl overflow-hidden">
+          <div key={item.id} className="rounded-xl overflow-hidden border border-white/10">
             <button
               onClick={() => toggleFaq(item.id)}
-              className="w-full p-5 text-left bg-white/10 backdrop-blur-md flex justify-between items-center hover:bg-white/15 transition-all duration-200"
+              className="w-full p-5 text-left bg-white/10 backdrop-blur-md flex justify-between items-center hover:bg-white/15 transition-all duration-300"
             >
               <span className="text-lg font-medium">{item.question}</span>
-              <span className="text-2xl">
-                {openFaq === item.id ? '−' : '+'}
+              <span 
+                className={`text-2xl transition-transform duration-300 ${
+                  openFaq === item.id ? 'rotate-45' : 'rotate-0'
+                }`}
+              >
+                +
               </span>
             </button>
 
-            {openFaq === item.id && (
+            <div 
+              className={`overflow-hidden transition-all duration-500 ease-in-out ${
+                openFaq === item.id 
+                  ? 'max-h-96 opacity-100' 
+                  : 'max-h-0 opacity-0'
+              }`}
+            >
               <div className="p-5 bg-white/5 backdrop-blur-sm">
                 <p className="text-gray-300">{item.answer}</p>
               </div>
-            )}
+            </div>
           </div>
         ))}
       </div>

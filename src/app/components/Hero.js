@@ -10,7 +10,7 @@ export default function Hero() {
         <span className="text-lg md:text-5xl mt-[-6px] md:mt-0 block">Next-Day Delivery.No Hidden Fees.</span>
       </h1>
       {/* Description */}
-      <p className="w-full text-xs md:text-lg text-center text-white mb-8">
+      <p className="w-full text-xs md:text-lg text-center text-white mt-2 mb-8">
         Outsource the timelines—keep the spotlight. Videomate edits your raw footage into<br />
         scroll-stopping videos in 24–48 hours, for one flat rate that never creeps up.
       </p>

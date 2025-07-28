@@ -10,7 +10,7 @@ export default function HowItWorks() {
           style={{
             background: 'radial-gradient(circle at center, #B47DFF 0%, #8B5CF6 30%, rgba(139, 92, 246, 0.4) 60%, transparent 100%)',
             filter: 'blur(100px)',
-            opacity: 0.25,
+            opacity: 0.175,
             transform: 'translateX(-50%)'
           }}
         ></div>

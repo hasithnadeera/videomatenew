@@ -59,27 +59,26 @@ function TestimonialCard({ testimonial }) {
     );
   }
   
-  // Video testimonial - tall 9:16 aspect ratio
+  // Video testimonial - 9:16 aspect ratio with same width as text cards
   return (
     <div className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden">
       <div className="relative w-full aspect-[9/16]">
         {isLoading && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-900/50">
-            <div className="w-8 h-8 border-4 border-purple-500/50 border-t-purple-500 rounded-full animate-spin"></div>
+            <div className="w-6 h-6 border-3 border-purple-500/50 border-t-purple-500 rounded-full animate-spin"></div>
           </div>
         )}
         
         {error && (
           <div className="absolute inset-0 flex items-center justify-center bg-gray-900/80">
-            <p className="text-red-400 text-sm text-center px-2">Unable to load video</p>
+            <p className="text-red-400 text-xs text-center px-2">Unable to load video</p>
           </div>
         )}
         
         <video 
           ref={videoRef}
           className="absolute inset-0 w-full h-full object-cover"
-          poster="/video-thumbnail.jpg"
-          preload="metadata"
+          preload="auto"
           onPlay={() => setIsPlaying(true)}
           onPause={() => setIsPlaying(false)}
           onLoadedData={handleLoadedData}
@@ -97,8 +96,8 @@ function TestimonialCard({ testimonial }) {
           aria-pressed={isPlaying}
           tabIndex={0}
         >
-          <div className="w-14 h-14 bg-purple-500/80 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-purple-500/90 transition-colors">
-            <svg className="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+          <div className="w-12 h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg">
+            <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
             </svg>
           </div>
@@ -106,9 +105,9 @@ function TestimonialCard({ testimonial }) {
         
         {/* Author info overlay at bottom */}
         {name && (
-          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
-            <p className="font-semibold text-white text-lg">{name}</p>
-            <p className="text-sm text-gray-300">{title}</p>
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-3">
+            <p className="font-semibold text-white text-sm">{name}</p>
+            <p className="text-xs text-gray-300">{title}</p>
           </div>
         )}
       </div>
