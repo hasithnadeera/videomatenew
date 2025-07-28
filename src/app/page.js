@@ -8,7 +8,6 @@ import TrustedBy from "./components/TrustedBy";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
 import PricingSection from "./components/PricingSection";
-import CFOComparison from "./components/CFOComparison";
 import Testimonials from "./components/Testimonials";
 import Guarantee from "./components/Guarantee";
 import FAQ from "./components/FAQ";
@@ -29,7 +28,6 @@ export default function Home() {
         <Features />
         <HowItWorks />
         <PricingSection />
-        <CFOComparison />
         <div id="testimonials">
           <Testimonials />
         </div>

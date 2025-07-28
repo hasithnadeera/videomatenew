@@ -31,7 +31,7 @@ export default function Features() {
     }
   ];
   return (
-    <section className="py-16 px-4">
+    <section className="py-12 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Main Title */}
         <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-16">
@@ -44,11 +44,10 @@ export default function Features() {
           {features.map((feature, index) => (
             <div 
               key={index}
-              className="backdrop-blur-xl rounded-4xl p-6 border border-white/20 hover:border-white/30 transition-all duration-300 h-80 w-full mx-auto shadow-xl hover:shadow-2xl"
+              className="backdrop-blur-xl rounded-4xl p-6 border border-[#D7B9FE]/50  h-88 w-full mx-auto shadow-xl hover:shadow-2xl"
               style={{
-                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
-                backdropFilter: 'blur(20px)',
-                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.175), rgba(255, 255, 255, 0.1))',
+                backdropFilter: 'blur(20px)'
               }}
             >
               <div className="flex flex-col items-center text-center h-full justify-between py-4">
@@ -61,7 +60,7 @@ export default function Features() {
                     className="w-24 h-24 object-contain"
                   />
                 </div>
-                <h3 className="text-md font-semibold mb-3"
+                <h3 className="text-md md:text-2xl font-semibold mb-3"
                     style={{
                       background: 'linear-gradient(to right, #BC8AFF, #D7B9FE)',
                       WebkitBackgroundClip: 'text',
@@ -69,7 +68,7 @@ export default function Features() {
                     }}>
                   {feature.title}
                 </h3>
-                <p className="text-white text-xs leading-relaxed">
+                <p className="text-white text-xs md:text-base leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -100,14 +99,21 @@ export default function Features() {
       </div>
 
       {/* Target Audience Section */}
-      <div className="max-w-4xl mx-auto mt-16 px-4">
+      <div className="max-w-4xl mx-auto mt-16 px-4 relative">
+        {/* Shadow behind the title */}
+        <div className="absolute top-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+          <div 
+            className="w-300 h-175 rounded-full blur-[200px]"
+            style={{
+              background: '#B47DFF',
+              opacity: 0.2
+            }}
+          ></div>
+        </div>
+        
         <div 
-          className="backdrop-blur-xl rounded-[64px] p-20 md:p-24 border border-white/20 shadow-xl mx-4"
-          style={{
-            background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
-            backdropFilter: 'blur(20px)',
-            boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
-          }}
+          className="backdrop-blur-xl rounded-[64px] p-20 md:p-24 border border-[#D7B9FE]/50 shadow-xl mx-4 relative z-10 "
+
         >
           <h2 className="text-2xl md:text-2xl lg:text-3xl font-semibold text-white text-center mb-8">
             Built for People Who Publish Constantly

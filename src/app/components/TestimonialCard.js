@@ -21,86 +21,97 @@ function TestimonialCard({ testimonial }) {
     setIsPlaying
   } = useVideoPlayer();
   
-  return (
-    <div className={hasQuote ? TESTIMONIAL_STYLES.container : ""}>
-      {hasQuote ? (
-        <div className="p-6 flex flex-col h-full">
-          <div className="flex mb-3">
-            {[...Array(stars)].map((_, i) => (
-              <svg key={i} className={TESTIMONIAL_STYLES.starIcon} fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-              </svg>
-            ))}
-          </div>
-          
-          <p className="text-lg mb-6 flex-grow">{quote}</p>
-          
-          <div className="flex items-center justify-end">
-            <div className="text-right mr-3">
-              <p className="font-semibold">{name}</p>
-              <p className="text-sm text-gray-400">{title}</p>
-            </div>
-            {avatar && (
-              <div className="w-10 h-10 rounded-full overflow-hidden relative">
-                <Image 
-                  src={avatar} 
-                  alt={name}
-                  width={40}
-                  height={40}
-                  className="object-cover"
-                />
-              </div>
-            )}
-          </div>
+  if (hasQuote) {
+    // Text testimonial - compact design
+    return (
+      <div className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 p-6 h-fit">
+        {/* Stars */}
+        <div className="flex mb-4">
+          {[...Array(stars)].map((_, i) => (
+            <svg key={i} className="w-4 h-4 text-purple-400 mr-1" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.799-2.034c-.784-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+            </svg>
+          ))}
         </div>
-      ) : (
-        <div className={`${TESTIMONIAL_STYLES.videoContainer} h-[500px] max-w-[280px] mx-auto`}>
-          {isLoading && (
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-8 h-8 border-4 border-purple-500/50 border-t-purple-500 rounded-full animate-spin"></div>
+        
+        {/* Quote */}
+        <p className="text-white text-base leading-relaxed mb-6 font-normal">{quote}</p>
+        
+        {/* Author info */}
+        <div className="flex items-center justify-between">
+          <div className="text-left">
+            <p className="font-medium text-white text-sm">{name}</p>
+            <p className="text-xs text-gray-400">{title}</p>
+          </div>
+          {avatar && (
+            <div className="w-10 h-10 rounded-full overflow-hidden relative ml-4 flex-shrink-0">
+              <Image 
+                src={avatar} 
+                alt={name}
+                width={40}
+                height={40}
+                className="object-cover"
+              />
             </div>
           )}
-          
-          {error && (
-            <div className="absolute inset-0 flex items-center justify-center bg-gray-900/80">
-              <p className="text-red-400 text-sm text-center px-2">Unable to load video</p>
-            </div>
-          )}
-          
-          <video 
-            ref={videoRef}
-            className="absolute inset-0 w-full h-full object-cover"
-            poster="/video-thumbnail.jpg"
-            preload="metadata"
-            onPlay={() => setIsPlaying(true)}
-            onPause={() => setIsPlaying(false)}
-            onLoadedData={handleLoadedData}
-            onError={handleError}
-          >
-            <source src={videoUrl} type="video/mp4" />
-          </video>
-          
-          <button 
-            className={`${TESTIMONIAL_STYLES.playButton} ${isPlaying ? 'opacity-0' : 'opacity-100'}`}
-            onClick={togglePlay}
-            onKeyDown={(e) => e.key === 'Enter' && togglePlay()}
-            aria-label={isPlaying ? "Pause video" : "Play video"}
-            aria-pressed={isPlaying}
-            tabIndex={0}
-          >
-            <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+        </div>
+      </div>
+    );
+  }
+  
+  // Video testimonial - tall 9:16 aspect ratio
+  return (
+    <div className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden">
+      <div className="relative w-full aspect-[9/16]">
+        {isLoading && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-900/50">
+            <div className="w-8 h-8 border-4 border-purple-500/50 border-t-purple-500 rounded-full animate-spin"></div>
+          </div>
+        )}
+        
+        {error && (
+          <div className="absolute inset-0 flex items-center justify-center bg-gray-900/80">
+            <p className="text-red-400 text-sm text-center px-2">Unable to load video</p>
+          </div>
+        )}
+        
+        <video 
+          ref={videoRef}
+          className="absolute inset-0 w-full h-full object-cover"
+          poster="/video-thumbnail.jpg"
+          preload="metadata"
+          onPlay={() => setIsPlaying(true)}
+          onPause={() => setIsPlaying(false)}
+          onLoadedData={handleLoadedData}
+          onError={handleError}
+        >
+          <source src={videoUrl} type="video/mp4" />
+        </video>
+        
+        {/* Play button */}
+        <button 
+          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${isPlaying ? 'opacity-0' : 'opacity-100'}`}
+          onClick={togglePlay}
+          onKeyDown={(e) => e.key === 'Enter' && togglePlay()}
+          aria-label={isPlaying ? "Pause video" : "Play video"}
+          aria-pressed={isPlaying}
+          tabIndex={0}
+        >
+          <div className="w-14 h-14 bg-purple-500/80 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-purple-500/90 transition-colors">
+            <svg className="w-6 h-6 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
               <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
             </svg>
-          </button>
-          
-          {name && (
-            <div className="absolute bottom-4 left-4 z-10 text-white">
-              <p className="font-semibold text-lg">{name}</p>
-              <p className="text-sm text-gray-300">{title}</p>
-            </div>
-          )}
-        </div>
-      )}
+          </div>
+        </button>
+        
+        {/* Author info overlay at bottom */}
+        {name && (
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent p-4">
+            <p className="font-semibold text-white text-lg">{name}</p>
+            <p className="text-sm text-gray-300">{title}</p>
+          </div>
+        )}
+      </div>
     </div>
   );
 }

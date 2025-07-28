@@ -1,4 +1,7 @@
 'use client';
+import React from "react";
+import ComparisonCard from './ComparisonCard';
+import { COMPARISON_DATA } from '../constants';
 
 export default function PricingSection() {
   const pricingPlans = [
@@ -47,10 +50,28 @@ export default function PricingSection() {
     }
   ];
 
+  // Enhanced comparison data with JSX for the highlighted item
+  const comparisonData = COMPARISON_DATA.map(item => {
+    if (item.isHighlighted) {
+      return {
+        ...item,
+        description: (
+          <>
+            $16,788
+            <span className="text-base text-white">
+              / year—all-inclusive unlimited videos, zero headaches
+            </span>
+          </>
+        )
+      };
+    }
+    return item;
+  });
+
   return (
     <section className="py-16 px-4">
       <div className="container mx-auto max-w-6xl">
-        {/* Header */}
+        {/* Pricing Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
             Plans <span className="text-3xl">&</span> Pricing
@@ -61,19 +82,30 @@ export default function PricingSection() {
         </div>
 
         {/* Pricing Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-24">
           {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`relative backdrop-blur-xl rounded-3xl p-8 border ${plan.isPopular ? 'border-purple-400/20 scale-105 z-10' : 'border-white/20'} shadow-xl`}
+              className={`relative backdrop-blur-xl rounded-4xl p-8 border ${plan.isPopular ? 'border-purple-400/20 scale-105 z-10' : 'border-[#CFADFF]/30 scale-95'} shadow-xl overflow-hidden`}
               style={{
-                background: plan.isPopular
-                  ? 'linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(99, 102, 241, 0.05))'
-                  : 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
-                backdropFilter: 'blur(20px)',
-                boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
+                background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05))',
+                backdropFilter: 'blur(20px)'
               }}
             >
+              {/* Pro card shadow at bottom left */}
+              {plan.isPopular && (
+                <div className="absolute bottom-0 left-0 -z-10">
+                  <div 
+                    className="w-85 h-125 rounded-full"
+                    style={{
+                      background: 'radial-gradient(circle at center, #814EC5 0%, rgba(129, 78, 197, 0.6) 40%, transparent 70%)',
+                      filter: 'blur(100px)',
+                      transform: 'translate(-25%, 25%)'
+                    }}
+                  ></div>
+                </div>
+              )}
+              
               {/* Plan Name */}
               <div className="mb-6">
                 <h3 className="text-lg font-bold" style={{
@@ -153,6 +185,43 @@ export default function PricingSection() {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CFO Comparison Section */}
+        <div className="flex flex-col items-center justify-center relative">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Why so affordable?</h2>
+          <p className="max-w-3xl text-center text-base md:text-lg mb-8 text-gray-200">
+            Our editors operate from Asia's creative hotbed—so you pay global-agency quality at Asia-based rates. No payroll. No office leases. Just pure editing horsepower.
+          </p>
+          <h3 className="text-xl md:text-2xl font-semibold mb-6 text-center">The Math That Makes CFOs Smile</h3>
+          
+          {/* Target Audience Section */}
+          <div className="max-w-4xl mx-auto mt-16 px-4 relative">
+            {/* Shadow behind the title */}
+            <div className="absolute top-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+              <div 
+                className="w-300 h-175 rounded-full blur-[200px]" 
+                style={{ 
+                  background: '#B47DFF', 
+                  opacity: 0.2 
+                }} 
+              ></div> 
+            </div>
+          </div>
+          
+          <div className="w-full max-w-2xl flex flex-col gap-4">
+            {comparisonData.map((item, index) => (
+              <ComparisonCard
+                key={index}
+                title={item.title}
+                description={item.description}
+                isHighlighted={item.isHighlighted}
+              />
+            ))}
+          </div>
+          <p className="mt-8 text-md text-gray-300 max-w-2xl text-center">
+            <span className="font-semibold text-white">*You keep the savings</span>—and still get award-winning edits delivered on autopilot.
+          </p>
         </div>
       </div>
     </section>
