@@ -6,28 +6,28 @@ import { SOCIAL_ICONS } from '../constants';
 const Footer = memo(function Footer() {
 
   return (
-    <footer className="py-12 px-4 pb-20">
-  <div className="h-px w-5/8 mx-auto bg-gradient-to-r from-[#C79FFF] to-[#B47DFF] mb-20 " />
+    <footer className="py-8 md:py-12 px-4 pb-16 md:pb-20">
+      <div className="h-px w-11/12 md:w-5/8 mx-auto bg-gradient-to-r from-[#C79FFF] to-[#B47DFF] mb-12 md:mb-20" />
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row md:justify-between md:items-center">
           {/* Left side: Logo and address */}
-          <div className="flex flex-col items-start mb-6 md:mb-0">
+          <div className="flex flex-col items-center md:items-start mb-8 md:mb-0">
             <Image 
               src="/logo.png" 
               alt="Videomate Logo" 
-              width={200} 
-              height={60} 
-              className="object-contain"
+              width={160} 
+              height={48} 
+              className="object-contain md:w-[200px] md:h-[60px]"
             />
-            <div className="mt-2 text-sm text-white">
+            <div className="mt-3 md:mt-2 text-xs md:text-sm text-white text-center md:text-left">
               <p>2nd Floor, No 150, Panadura Road,</p>
               <p>Horana, Sri Lanka</p>
             </div>
           </div>
 
           {/* Right side: Social icons and copyright */}
-          <div className="flex flex-col items-end text-right">
-            <div className="flex items-center space-x-4 mb-2">
+          <div className="flex flex-col items-center md:items-end text-center md:text-right">
+            <div className="flex items-center space-x-3 md:space-x-4 mb-3 md:mb-2">
               {SOCIAL_ICONS.map((social, index) => (
                 <SocialIcon
                   key={index}
@@ -37,7 +37,13 @@ const Footer = memo(function Footer() {
                 />
               ))}
             </div>
-            <p className="text-sm text-white">
+            {/* Mobile: Two lines */}
+            <div className="block md:hidden text-xs text-white leading-relaxed text-center">
+              <p>© 2025 Videomate</p>
+              <p>World-class edits at Asia-smart prices.</p>
+            </div>
+            {/* Desktop: One line */}
+            <p className="hidden md:block text-sm text-white leading-relaxed">
               © 2025 Videomate — World-class edits at Asia-smart prices.
             </p>
           </div>

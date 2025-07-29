@@ -32,7 +32,7 @@ export default function ComparisonCard({ title, description, isHighlighted = fal
             </div>
             <div className="w-px bg-white my-4"></div>
             <div className="flex-1 flex items-center px-6">
-              <span className="text-base text-white">
+              <span className="text-sm md:text-base text-white">
                 {description}
               </span>
             </div>
@@ -53,7 +53,7 @@ export default function ComparisonCard({ title, description, isHighlighted = fal
         </div>
         <div className="w-px bg-white my-4"></div>
         <div className="flex-1 flex items-center px-6">
-          <span className="text-base text-white">
+          <span className="text-sm md:text-base text-white">
             {description}
           </span>
         </div>

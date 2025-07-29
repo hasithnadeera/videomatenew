@@ -40,21 +40,21 @@ export default function FAQ() {
   return (
     <section className="py-16 px-4 w-full max-w-6xl mx-auto relative">
       {/* Shadow behind the title */}
-      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+      <div className="absolute top-8 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:block">
         <div 
           className="w-300 h-175 rounded-full blur-[200px]" 
           style={{ 
             background: '#B47DFF', 
             opacity: 0.2 
-          }} 
+          }}
         ></div>
       </div>
 
       <div className="text-center mb-12 relative z-10">
-        <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#B47DFF] to-[#D0AEFF] bg-clip-text text-transparent">
+        <h2 className="text-3xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#B47DFF] to-[#D0AEFF] bg-clip-text text-transparent drop-shadow-2xl">
           Zero-Risk Guarantee
         </h2>
-        <div className="text-2xl md:text-3xl font-semibold mb-2">
+        <div className="text-xl md:text-3xl font-semibold ">
           14 days of &quot;WOW&quot; or 100% refund
         </div>
         <p className="text-lg text-gray-300">
@@ -64,10 +64,10 @@ export default function FAQ() {
 
       <div className="max-w-3xl mx-auto space-y-4 relative z-10">
         {faqItems.map((item) => (
-          <div key={item.id} className="rounded-xl overflow-hidden border border-white/10">
+          <div key={item.id} className="rounded-2xl overflow-hidden border border-white/40">
             <button
               onClick={() => toggleFaq(item.id)}
-              className="w-full p-5 text-left bg-white/10 backdrop-blur-md flex justify-between items-center hover:bg-white/15 transition-all duration-300"
+              className="w-full p-5 text-left bg-white/20 backdrop-blur-md flex justify-between items-center hover:bg-white/15 transition-all duration-300"
             >
               <span className="text-lg font-medium">{item.question}</span>
               <span 

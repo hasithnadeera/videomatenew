@@ -95,7 +95,7 @@ export const TESTIMONIALS_DATA = [
   {
     id: 1,
     stars: 5,
-    quote: '"Videomate chopped my editing workload to zero—and my channel\'s revenue hit 6 figures."',
+    quote: '"Videomate chopped my editing workload to zero—and my channel\’s revenue skyrocketed past six figures."',
     name: 'Sarah K.',
     title: '280 k-sub YouTuber',
     avatar: null, // Replace with actual avatar path when available

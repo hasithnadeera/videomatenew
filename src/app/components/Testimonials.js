@@ -36,7 +36,7 @@ export default function Testimonials() {
   ];
 
   return (
-    <section className="py-16 px-4 relative overflow-x-hidden">
+    <section className="py-6 md:py-8 px-4 relative overflow-x-hidden">
       {/* Right side shadow - half circle */}
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-0">
         <div 
@@ -51,10 +51,10 @@ export default function Testimonials() {
       </div>
 
       {/* Testimonials Section */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-white relative z-10">Success Stories</h2>
-      <div className="max-w-4xl mx-auto relative z-10 mb-20">
-        {/* Two-column masonry layout */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-center mb-8 md:mb-12 text-white relative z-10">Success Stories</h2>
+      <div className="max-w-4xl mx-auto relative z-10 mb-12 md:mb-20">
+        {/* Mobile: Single column, Desktop: Two-column masonry layout */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
           
           {/* Left Column */}
           <div className="flex flex-col gap-6">
@@ -94,21 +94,21 @@ export default function Testimonials() {
 
       {/* Integration Tools Section */}
       <div className="max-w-6xl mx-auto relative z-10">
-        <h3 className="text-2xl md:text-3xl font-bold text-center mb-12 text-white">Seamless Integration</h3>
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-8 md:mb-12 text-white drop-shadow-2xl md:drop-shadow-none">Seamless Integration</h3>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-8">
           {integrationTools.map((tool, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <div className="mb-6 relative w-16 h-16 flex items-center justify-center">
+              <div className="mb-3 md:mb-6 relative w-12 h-12 md:w-16 md:h-16 flex items-center justify-center">
                 <Image 
                   src={tool.logo} 
                   alt={tool.name} 
                   width={64} 
                   height={64} 
-                  className="object-contain"
+                  className="object-contain w-full h-full"
                 />
               </div>
-              <h4 className="text-xl font-semibold mb-2 text-white">{tool.name}</h4>
-              <p className="text-sm text-gray-300 max-w-[200px]">{tool.description}</p>
+              <h4 className="text-lg md:text-xl font-semibold mb-1 md:mb-2 text-white">{tool.name}</h4>
+              <p className="text-xs md:text-sm text-gray-300 max-w-[200px] leading-tight">{tool.description}</p>
             </div>
           ))}
         </div>

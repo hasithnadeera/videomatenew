@@ -58,10 +58,10 @@ export default function Navbar() {
        {/* Desktop Layout */}
        <div className="hidden md:flex items-center justify-center gap-8 w-full ">
          {/* Logo - left */}
-         <div className="flex items-center z-10 order-1">
+         <div className="flex items-center z-20 order-1">
            <div className="relative">
              <div 
-               className="absolute inset-0 rounded-full blur-md animate-glow" 
+               className="absolute inset-0 rounded-full blur-md animate-glow hidden md:block" 
                style={{ backgroundColor: '#B57FFE', opacity: 0.6 }}
              ></div>
              <Image 
@@ -74,8 +74,8 @@ export default function Navbar() {
            </div>
          </div>
          {/* Centered Nav Links - Desktop */}
-         <div className="order-2">
-           <div className="flex bg-white/10 backdrop-blur-[50px] rounded-full px-8 py-2 border border-[#CFADFF] shadow-sm font-bold text-lg">
+         <div className="order-2 z-10">
+           <div className="flex bg-white/10 backdrop-blur-[50px] rounded-full px-8 py-2 border border-[#CFADFF] shadow-sm font-bold text-lg relative">
              <NavLink href="#" onClick={() => scrollToSection('home')}>Home</NavLink>
              <NavLink href="#" onClick={() => scrollToSection('portfolio')}>Portfolio</NavLink>
              <NavLink href="#" onClick={() => scrollToSection('testimonials')}>Testimonials</NavLink>
@@ -84,7 +84,7 @@ export default function Navbar() {
          </div>
  
          {/* CTA Button - right (glassmorphism) */}
-         <div className="z-10 order-3">
+         <div className="z-30 order-3">
            <Link
              href="/book"
              className="
