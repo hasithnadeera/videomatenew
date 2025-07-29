@@ -21,14 +21,16 @@ export default function Hero() {
           <div className="rounded-2xl w-[130%] h-[130%] bg-[#B47DFF] blur-[60px] opacity-70 animate-glow hidden md:block"></div>
         </div>
         <div className="relative w-full h-full rounded-2xl overflow-hidden z-10">
-          <iframe
-            src="https://www.youtube.com/embed/6KB9h-FcD8Q"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-            className="w-full h-full rounded-2xl"
-          ></iframe>
+          <div style={{position:'relative',paddingTop:'56.25%'}}>
+            <iframe 
+              src="https://iframe.mediadelivery.net/embed/345790/3837cae3-9683-4353-a9cf-3d38f681005d?autoplay=true&loop=false&muted=false&preload=false&responsive=true" 
+              loading="lazy" 
+              style={{border:0,position:'absolute',top:0,height:'100%',width:'100%'}} 
+              allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" 
+              allowFullScreen={true}
+              className="rounded-2xl"
+            ></iframe>
+          </div>
         </div>
       </div>
       {/* CTA Button */}
