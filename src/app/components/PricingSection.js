@@ -191,7 +191,7 @@ export default function PricingSection() {
         <div className="flex flex-col items-center justify-center relative">
           <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Why so affordable?</h2>
           <p className="max-w-3xl text-center text-base md:text-lg mb-8 text-gray-200">
-            Our editors operate from Asia's creative hotbed—so you pay global-agency quality at Asia-based rates. No payroll. No office leases. Just pure editing horsepower.
+            Our editors operate from Asia&apos;s creative hotbed—so you pay global-agency quality at Asia-based rates. No payroll. No office leases. Just pure editing horsepower.
           </p>
           <h3 className="text-xl md:text-2xl font-semibold mb-6 text-center">The Math That Makes CFOs Smile</h3>
           

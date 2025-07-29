@@ -55,10 +55,10 @@ export default function FAQ() {
           Zero-Risk Guarantee
         </h2>
         <div className="text-2xl md:text-3xl font-semibold mb-2">
-          14 days of \"WOW\" or 100% refund
+          14 days of &quot;WOW&quot; or 100% refund
         </div>
         <p className="text-lg text-gray-300">
-          Stay because you're thrilled—not because you're locked in
+          Stay because you&apos;re thrilled—not because you&apos;re locked in
         </p>
       </div>
 
