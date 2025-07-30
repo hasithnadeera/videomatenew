@@ -45,7 +45,8 @@ export default function Hero() {
       </div>
       {/* CTA Button */}
       <a
-        href="#"
+        target="_blank"
+        href="https://calendly.com/videomatecreators/book-a-call-earn-views?month=2025-07"
         className="bg-gradient-to-r from-[#B47DFF] to-[#8F5CFF] text-white font-semibold text-base px-6 py-2.5 rounded-full shadow-md transition hover:brightness-110 backdrop-blur-xl bg-white/10 border border-white/20"
       >
         Start 7-Day Free Trial

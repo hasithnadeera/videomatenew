@@ -26,13 +26,13 @@ export default function Home() {
         </div>
         <TrustedBy />
         <Features />
-        <HowItWorks />
+        <HowItWorks />  
         <PricingSection />
         <div id="testimonials">
           <Testimonials />
-        </div>  
+        </div>
         <div id="FAQ">
-          <FAQ/>
+          <FAQ />
         </div>
       </main>
       <Footer />

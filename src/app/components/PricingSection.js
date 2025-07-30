@@ -8,6 +8,11 @@ export default function PricingSection() {
   const [touchEnd, setTouchEnd] = useState(0);
   const [scrollContainer, setScrollContainer] = useState(null);
 
+  // Add click handler for redirecting to Calendly
+  const handlePricingCardClick = () => {
+    window.open('https://calendly.com/videomatecreators/book-a-call-earn-views?month=2025-07', '_blank');
+  };
+
   const pricingPlans = [
     {
       name: "Starter",
@@ -29,7 +34,7 @@ export default function PricingSection() {
       period: "/mo",
       features: [
         <>Active videos <span style={{color: '#BA88FF'}}>5</span></>,
-        <>Turnaround <span style={{color: '#BA88FF'}}>24h</span></>
+        <>Turnaround <span style={{color: '#BA88FF'}}>≤ 24h</span></>
       ],
       extraFeatures: [
         "Team Dashboard",
@@ -43,7 +48,7 @@ export default function PricingSection() {
       period: "/mo",
       features: [
         <>Active videos <span style={{color: '#BA88FF'}}>4</span></>,
-        <>Turnaround <span style={{color: '#BA88FF'}}>24h</span></>
+        <>Turnaround <span style={{color: '#BA88FF'}}>≤ 24h</span></>
       ],
       extraFeatures: [
         "White label",
@@ -162,7 +167,8 @@ export default function PricingSection() {
               {pricingPlans.map((plan, index) => (
                 <div key={plan.name} className="flex-shrink-0 w-64" style={{ scrollSnapAlign: 'center' }}>
                   <div
-                    className={`relative backdrop-blur-xl rounded-4xl p-4 border overflow-hidden h-96 ${
+                    onClick={handlePricingCardClick}
+                    className={`relative backdrop-blur-xl rounded-4xl p-4 border overflow-hidden h-96 cursor-pointer transition-all duration-300 hover:scale-105 ${
                       plan.name === 'Pro'
                         ? 'border-purple-400/20 shadow-xl'
                         : 'border-[#CFADFF]/30 shadow-xl'
@@ -275,7 +281,12 @@ export default function PricingSection() {
             {pricingPlans.map((plan, index) => (
             <div
               key={index}
-              className={`relative backdrop-blur-xl rounded-4xl p-4 sm:p-6 md:p-8 border ${plan.isPopular ? 'border-purple-400/20 md:scale-105 z-10' : 'border-[#CFADFF]/30 md:scale-95'} shadow-xl overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:border-purple-300/40 cursor-pointer`}
+              onClick={handlePricingCardClick}
+              className={`relative backdrop-blur-xl rounded-4xl p-4 sm:p-6 md:p-8 border ${
+                plan.isPopular 
+                ? 'border-purple-400/20 md:scale-105 z-10 shadow-xl overflow-hidden transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-2xl hover:border-purple-300/40 cursor-pointer' 
+                : 'border-[#CFADFF]/30 md:scale-95 shadow-xl overflow-hidden transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl hover:border-purple-300/30 cursor-pointer'
+              }`}
               style={{
                 background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05))',
                 backdropFilter: 'blur(20px)'
@@ -373,6 +384,7 @@ export default function PricingSection() {
                 </div>
               </div>
             </div>
+            
           ))}
         </div>
         {/* CFO Comparison Section */}

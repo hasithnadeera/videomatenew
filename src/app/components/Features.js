@@ -31,7 +31,7 @@ export default function Features() {
     }
   ];
   return (
-    <section className="py-12 px-4">
+    <section className="py-8 px-4">
       <div className="container mx-auto max-w-6xl">
         {/* Main Title */}
         <h2 className="text-4xl md:text-5xl font-semibold text-center text-white mb-16">

@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function TrustedBy() {
   return (
-    <section className="py-16 bg-transparent overflow-hidden">
+    <section className="py-12 bg-transparent overflow-hidden">
       <div className="container mx-auto px-4">
         <h3 className="text-2xl md:text-2xl font-semibold text-center text-white mb-12 ">
           Trusted by creators & marketers worldwide

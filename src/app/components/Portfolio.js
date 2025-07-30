@@ -49,7 +49,7 @@ export default function Portfolio() {
         }}
       >
         <div 
-          className={`flex space-x-8 py-8 px-6 w-max ${
+          className={`flex space-x-8 px-6 w-max ${
             isUserInteracting ? '' : 'animate-scroll-rtl'
           }`}
         >
