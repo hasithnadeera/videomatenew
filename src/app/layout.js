@@ -10,7 +10,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: "Videomate",
+  title: "Videomate | Unlimited Video Editing Platform",
   description: "Videomate is a video editing platform",
 };
 

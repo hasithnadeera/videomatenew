@@ -77,3 +77,13 @@ body {
 .animate-scroll-rtl:hover {
   animation-play-state: paused;
 }
+
+/* Add this to hide scrollbars */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

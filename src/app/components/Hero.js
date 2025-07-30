@@ -21,6 +21,16 @@ export default function Hero() {
           <div className="rounded-2xl w-[130%] h-[130%] bg-[#B47DFF] blur-[60px] opacity-70 animate-glow hidden md:block"></div>
         </div>
         <div className="relative w-full h-full rounded-2xl overflow-hidden z-10">
+          {/* Thumbnail Image */}
+          <div className="absolute inset-0 z-10">
+            <Image
+              src="/vslThumbnail.jpg"
+              alt="Video Thumbnail"
+              fill
+              className="object-cover rounded-2xl"
+              priority
+            />
+          </div>
           <div style={{position:'relative',paddingTop:'56.25%'}}>
             <iframe 
               src="https://iframe.mediadelivery.net/embed/345790/3837cae3-9683-4353-a9cf-3d38f681005d?autoplay=true&loop=false&muted=false&preload=false&responsive=true" 
@@ -28,7 +38,7 @@ export default function Hero() {
               style={{border:0,position:'absolute',top:0,height:'100%',width:'100%'}} 
               allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" 
               allowFullScreen={true}
-              className="rounded-2xl"
+              className="rounded-2xl z-20"
             ></iframe>
           </div>
         </div>

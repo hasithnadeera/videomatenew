@@ -86,7 +86,9 @@ export default function Navbar() {
          {/* CTA Button - right (glassmorphism) */}
          <div className="z-30 order-3">
            <Link
-             href="/book"
+             href="https://calendly.com/videomatecreators/book-a-call-earn-views?month=2025-07"
+             target="_blank"
+             rel="noopener noreferrer"
              className="
                bg-gradient-to-r
                from-[#B47DFF]
