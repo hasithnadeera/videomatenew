@@ -33,7 +33,7 @@ export default function PricingSection() {
       price: "$1,399",
       period: "/mo",
       features: [
-        <>Active videos <span style={{color: '#BA88FF'}}>5</span></>,
+        <>Active videos <span style={{color: '#BA88FF'}}>2</span></>,
         <>Turnaround <span style={{color: '#BA88FF'}}>≤ 24h</span></>
       ],
       extraFeatures: [
