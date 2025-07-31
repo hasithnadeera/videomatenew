@@ -34,7 +34,7 @@ export default function Hero() {
           <div style={{position:'relative',paddingTop:'56.25%'}}>
             <iframe 
               src="https://iframe.mediadelivery.net/embed/345790/3837cae3-9683-4353-a9cf-3d38f681005d?autoplay=true&loop=false&muted=false&preload=false&responsive=true" 
-              loading="lazy" 
+              loading="eager" 
               style={{border:0,position:'absolute',top:0,height:'100%',width:'100%'}} 
               allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" 
               allowFullScreen={true}

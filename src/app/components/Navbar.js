@@ -3,9 +3,12 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 
 export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const router = useRouter();
+  const pathname = usePathname();
   
   const scrollToSection = (sectionId) => {
     // Close mobile menu if open
@@ -13,25 +16,48 @@ export default function Navbar() {
       setMobileMenuOpen(false);
     }
     
-    // Use setTimeout to ensure DOM is ready, especially after state changes
-    setTimeout(() => {
-      // Get the section element
-      const section = document.getElementById(sectionId);
-      
-      // If section exists, scroll to it smoothly
-      if (section) {
-        window.scrollTo({
-          top: section.offsetTop - 100, // Offset to account for navbar height
-          behavior: 'smooth'
-        });
-      } else if (sectionId === 'home') {
-        // Scroll to top for home
-        window.scrollTo({
-          top: 0,
-          behavior: 'smooth'
-        });
-      }
-    }, 100); // Small delay to ensure DOM updates
+    // If we're not on the home page, navigate there first
+    if (pathname !== '/') {
+      router.push('/');
+      // Wait for navigation to complete, then scroll
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          window.scrollTo({
+            top: section.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        } else if (sectionId === 'home') {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    } else {
+      // We're already on home page, just scroll
+      setTimeout(() => {
+        const section = document.getElementById(sectionId);
+        if (section) {
+          window.scrollTo({
+            top: section.offsetTop - 100,
+            behavior: 'smooth'
+          });
+        } else if (sectionId === 'home') {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        }
+      }, 100);
+    }
+  };
+
+  const handlePortfolioClick = () => {
+    if (mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+    router.push('/portfolio');
   };
 
   return (
@@ -77,7 +103,7 @@ export default function Navbar() {
          <div className="order-2 z-10">
            <div className="flex bg-white/10 backdrop-blur-[50px] rounded-full px-8 py-2 border border-[#CFADFF] shadow-sm font-bold text-lg relative">
              <NavLink href="#" onClick={() => scrollToSection('home')}>Home</NavLink>
-             <NavLink href="#" onClick={() => scrollToSection('portfolio')}>Portfolio</NavLink>
+             <NavLink href="/portfolio" onClick={handlePortfolioClick}>Portfolio</NavLink>
              <NavLink href="#" onClick={() => scrollToSection('testimonials')}>Testimonials</NavLink>
              <NavLink href="#" onClick={() => scrollToSection('FAQ')}>FAQs</NavLink>
            </div>
@@ -174,7 +200,7 @@ export default function Navbar() {
               <NavLink href="#" onClick={() => scrollToSection('home')}>Home</NavLink>
             </div>
             <div className="transition-all duration-300 ease-in-out" style={{ transitionDelay: '200ms', opacity: mobileMenuOpen ? 1 : 0, transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)' }}>
-              <NavLink href="#" onClick={() => scrollToSection('portfolio')}>Portfolio</NavLink>
+              <NavLink href="/portfolio" onClick={handlePortfolioClick}>Portfolio</NavLink>
             </div>
             <div className="transition-all duration-300 ease-in-out" style={{ transitionDelay: '250ms', opacity: mobileMenuOpen ? 1 : 0, transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)' }}>
               <NavLink href="#" onClick={() => scrollToSection('testimonials')}>Testimonials</NavLink>
