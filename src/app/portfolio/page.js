@@ -36,7 +36,7 @@ export default function PortfolioPage() {
       ]
     },
     'Challenges and Competitions': {
-      aspectRatio: '9:16',
+      aspectRatio: '16:9',
       videos: [
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/1.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/2.mp4',
@@ -66,14 +66,10 @@ export default function PortfolioPage() {
       aspectRatio: '16:9',
       videos: [
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Music%20Videos/1.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Music%20Videos/2.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Music%20Videos/3.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Music%20Videos/4.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Music%20Videos/5.mp4'
       ]
     },
     'Tutorials and How-To Videos': {
-      aspectRatio: '9:16',
+      aspectRatio: '16:9',
       videos: [
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Tutorials%20and%20How-To%20Videos/1.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Tutorials%20and%20How-To%20Videos/2.mp4',
