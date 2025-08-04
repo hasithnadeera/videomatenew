@@ -99,7 +99,7 @@ export const TESTIMONIALS_DATA = [
     name: 'Sarah K.',
     title: '280 k-sub YouTuber',
     avatar: null, // Replace with actual avatar path when available
-    videoUrl: 'https://grtomatemedia.b-cdn.net/9.mp4'
+    videoUrl: 'https://grtomatemedia.b-cdn.net/philippe%20testimonial.mp4'
   },
   {
     id: 2,
@@ -118,8 +118,8 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 4,
-    name: 'Jupitor',
-    title: '280 k-sub YouTuber',
-    videoUrl: 'https://grtomatemedia.b-cdn.net/9.mp4'
+    name: 'Philippe Bensadon',
+    title: 'BigVU',
+    videoUrl: 'https://grtomatemedia.b-cdn.net/philippe%20testimonial.mp4'
   }
 ];

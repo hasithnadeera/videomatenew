@@ -34,7 +34,7 @@ export default function Portfolio() {
   }, []);
 
   return (
-    <div className="relative w-full mb-4">
+    <div className="relative w-full mb-4 mt-12">
       <div 
         ref={containerRef}
         className="overflow-x-auto overflow-y-hidden scrollbar-hide"

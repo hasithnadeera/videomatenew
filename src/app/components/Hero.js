@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Hero() {
   return (
-    <section className="w-full flex flex-col items-center justify-center min-h-[60vh] md:min-h-[80vh] px-8 py-8 md:py-12 bg-transparent md:mt-24 mt-24">
+    <section className="w-full flex flex-col items-center justify-center px-8 pt-34 md:pt-36 bg-transparent">
       {/* Headline */}
       <h1 className="w-full text-[26px] md:text-5xl font-extrabold text-center text-white">
         <span className="bg-gradient-to-r from-[#B57FFE] to-[#ECECEC] text-transparent bg-clip-text">Unlimited Video Editing.</span>
@@ -14,35 +14,7 @@ export default function Hero() {
         Outsource the timelines—keep the spotlight. Videomate edits your raw footage into<br />
         scroll-stopping videos in 24–48 hours, for one flat rate that never creeps up.
       </p>
-      {/* Video Thumbnail */}
-      <div className="relative w-full max-w-3xl mx-auto aspect-video mb-6 md:mb-8 flex items-center justify-center">
-        {/* Animated colored shadow */}
-        <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-0">
-          <div className="rounded-2xl w-[130%] h-[130%] bg-[#B47DFF] blur-[60px] opacity-70 animate-glow hidden md:block"></div>
-        </div>
-        <div className="relative w-full h-full rounded-2xl overflow-hidden z-10">
-          {/* Thumbnail Image */}
-          <div className="absolute inset-0 z-10">
-            <Image
-              src="/vslThumbnail.jpg"
-              alt="Video Thumbnail"
-              fill
-              className="object-cover rounded-2xl"
-              priority
-            />
-          </div>
-          <div style={{position:'relative',paddingTop:'56.25%'}}>
-            <iframe 
-              src="https://iframe.mediadelivery.net/embed/345790/3837cae3-9683-4353-a9cf-3d38f681005d?autoplay=true&loop=false&muted=false&preload=false&responsive=true" 
-              loading="eager" 
-              style={{border:0,position:'absolute',top:0,height:'100%',width:'100%'}} 
-              allow="accelerometer;gyroscope;autoplay;encrypted-media;picture-in-picture;" 
-              allowFullScreen={true}
-              className="rounded-2xl z-20"
-            ></iframe>
-          </div>
-        </div>
-      </div>
+
       {/* CTA Button */}
       <a
         target="_blank"
