@@ -11,8 +11,7 @@ export default function Hero() {
       </h1>
       {/* Description */}
       <p className="w-full text-xs md:text-lg text-center text-white mt-2 mb-6 md:mb-8">
-        Outsource the timelines—keep the spotlight. Videomate edits your raw footage into<br />
-        scroll-stopping videos in 24–48 hours, for one flat rate that never creeps up.
+        Videomate edits your videos in 24–48 hours. One flat rate. No surprises.
       </p>
 
       {/* CTA Button */}

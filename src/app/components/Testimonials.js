@@ -71,6 +71,20 @@ export default function Testimonials() {
                 <TestimonialCard testimonial={testimonials[2]} />
               </Suspense>
             </ErrorBoundary>
+            
+            {/* Additional text testimonial */}
+            <ErrorBoundary>
+              <Suspense fallback={<div className="animate-pulse h-64 bg-white/5 rounded-2xl"></div>}>
+                <TestimonialCard testimonial={testimonials[4]} />
+              </Suspense>
+            </ErrorBoundary>
+            
+            {/* Additional text testimonial */}
+            <ErrorBoundary>
+              <Suspense fallback={<div className="animate-pulse h-64 bg-white/5 rounded-2xl"></div>}>
+                <TestimonialCard testimonial={testimonials[6]} />
+              </Suspense>
+            </ErrorBoundary>
           </div>
 
           {/* Right Column */}

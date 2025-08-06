@@ -90,13 +90,15 @@ export default function Navbar() {
                className="absolute inset-0 rounded-full blur-md animate-glow hidden md:block" 
                style={{ backgroundColor: '#B57FFE', opacity: 0.6 }}
              ></div>
-             <Image 
+            <a href="/">
+              <Image 
                src="/logo.png" 
                alt="Videomate Logo" 
                width={180} 
                height={36} 
                className="object-contain relative z-10"
              />
+            </a>
            </div>
          </div>
          {/* Centered Nav Links - Desktop */}

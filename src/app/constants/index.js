@@ -112,14 +112,48 @@ export const TESTIMONIALS_DATA = [
   },
   {
     id: 3,
+    stars: 5,
+    quote: '"Videomate transformed our content strategy. The quality is incredible and turnaround times are unmatched. Our engagement rates doubled within the first month."',
     name: 'Sam K.',
     title: 'CEO, Founder',
-    videoUrl: 'https://grtomatemedia.b-cdn.net/10.mp4'
+    avatar: null
   },
   {
     id: 4,
     name: 'Philippe Bensadon',
     title: 'BigVU',
     videoUrl: 'https://grtomatemedia.b-cdn.net/philippe%20testimonial.mp4'
+  },
+  {
+    id: 5,
+    stars: 5,
+    quote: '"Videomate boosted our conversions by 60% with pro-level videos—and they get our brand better than we do!"',
+    name: 'Alex Chen',
+    title: 'Marketing Director',
+    avatar: null
+  },
+  {
+    id: 6,
+    stars: 5,
+    quote: '"From concept to final cut, Videomate exceeded every expectation. We went from struggling with content to having a library of stunning videos that drive real results."',
+    name: 'Maria Rodriguez',
+    title: 'E-commerce Founder',
+    avatar: null
+  },
+  {
+    id: 7,
+    stars: 5,
+    quote: '"Videomate slashed our costs and boosted engagement by 300% in two months—all with Hollywood-quality content."',
+    name: 'David Kim',
+    title: 'Startup Founder',
+    avatar: null
+  },
+  {
+    id: 8,
+    stars: 5,
+    quote: '"Switching to Videomate was the best decision for our brand. Their editors capture our vision perfectly and deliver consistently amazing results that our audience loves."',
+    name: 'Rachel Martinez',
+    title: 'Brand Manager',
+    avatar: null
   }
 ];

@@ -11,20 +11,20 @@ export default function PortfolioPage() {
       aspectRatio: '9:16',
       videos: [
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/1.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/2.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/3.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/short%20form%202.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/short%204.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/4.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/5.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/shortform%201.mp4',
       ]
     },
     'Facebook Ads': {
       aspectRatio: '9:16',
       videos: [
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/1.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/2.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%204.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%201.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/3.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/4.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/5.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%205.mp4',
       ]
     },
     'Animated Explainers': {
@@ -41,7 +41,6 @@ export default function PortfolioPage() {
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/1.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/2.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/3.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/4.mp4'
       ]
     },
     'Event Recaps': {
@@ -57,15 +56,9 @@ export default function PortfolioPage() {
     'Long form Youtube videos': {
       aspectRatio: '16:9',
       videos: [
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/1.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/2.mp4',  
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/homepage%20long.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/long%20form%20yt.mp4',  
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/3.mp4',
-      ]
-    },
-    'Music Videos': {
-      aspectRatio: '16:9',
-      videos: [
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Music%20Videos/1.mp4',
       ]
     },
     'Tutorials and How-To Videos': {
@@ -73,14 +66,19 @@ export default function PortfolioPage() {
       videos: [
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Tutorials%20and%20How-To%20Videos/1.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Tutorials%20and%20How-To%20Videos/2.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Tutorials%20and%20How-To%20Videos/3.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Tutorials%20and%20How-To%20Videos/tutorial.mp4',
       ]
     },
     'User Testimonials': {
       aspectRatio: '9:16',
       videos: [
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/1.mp4',
-        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/2.mp4',
+                "https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonilas%203.mp4",
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonilas%201.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonials%204.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/UGC%2001.mp4',
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/UGC%2003.mp4',
+
+
       ]
     },
     'Vlogs and Day in the life videos': {
@@ -89,6 +87,12 @@ export default function PortfolioPage() {
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Vlogs%20and%20Day%20in%20the%20life%20videos/1.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Vlogs%20and%20Day%20in%20the%20life%20videos/2.mp4',
         'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Vlogs%20and%20Day%20in%20the%20life%20videos/3.mp4',
+      ]
+    },
+    'VSL':{
+      aspectRatio: '16:9',
+      videos: [
+        'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/VSL/VSL.mp4',
       ]
     }
   };
