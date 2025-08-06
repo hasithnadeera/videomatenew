@@ -2,7 +2,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import ClientWrapper from "./components/ClientWrapper";
 import Script from "next/script";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 const poppins = Poppins({
   weight: ['400', '500', '600', '700'],
   subsets: ["latin"],
@@ -38,6 +38,7 @@ export default function RootLayout({ children }) {
         </noscript>
         <ClientWrapper>
           {children}
+          <SpeedInsights />
         </ClientWrapper>
       </body>
     </html>
