@@ -64,7 +64,7 @@ function TestimonialCard({ testimonial }) {
     <div className="rounded-2xl bg-white/5 backdrop-blur-sm border border-white/10 overflow-hidden">
       <div className="relative w-full aspect-[9/16]">
         {isLoading && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-900/50">
+          <div className="absolute inset-0 flex items-center justify-center bg-white-900/50">
             <div className="w-6 h-6 border-3 border-purple-500/50 border-t-purple-500 rounded-full animate-spin"></div>
           </div>
         )}

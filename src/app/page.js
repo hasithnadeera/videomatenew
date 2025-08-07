@@ -7,6 +7,7 @@ import Portfolio from "./components/Portfolio";
 import TrustedBy from "./components/TrustedBy";
 import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
+import CaseStudies from "./components/caseStudies";
 import PricingSection from "./components/PricingSection";
 import Testimonials from "./components/Testimonials";
 
@@ -27,6 +28,7 @@ export default function Home() {
         <TrustedBy />
         <Features />
         <HowItWorks />  
+        <CaseStudies />
         <PricingSection />
         <div id="testimonials">
           <Testimonials />

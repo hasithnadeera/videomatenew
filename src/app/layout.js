@@ -41,7 +41,6 @@ export default function RootLayout({ children }) {
           {children}
           <SpeedInsights />
           <Analytics />
-          {/* Analytics components for performance monitoring and tracking */}
         </ClientWrapper>
       </body>
     </html>

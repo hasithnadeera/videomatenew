@@ -103,7 +103,7 @@ export default function Navbar() {
          </div>
          {/* Centered Nav Links - Desktop */}
          <div className="order-2 z-10">
-           <div className="flex bg-white/10 backdrop-blur-[50px] rounded-full px-8 py-2 border border-[#CFADFF] shadow-sm font-bold text-lg relative">
+           <div className="flex bg-white/10 backdrop-blur-[60px] rounded-full px-8 py-2 border border-[#CFADFF] shadow-sm font-bold text-lg relative">
              <NavLink href="#" onClick={() => scrollToSection('home')}>Home</NavLink>
              <NavLink href="/portfolio" onClick={handlePortfolioClick}>Portfolio</NavLink>
              <NavLink href="#" onClick={() => scrollToSection('testimonials')}>Testimonials</NavLink>
@@ -114,7 +114,7 @@ export default function Navbar() {
          {/* CTA Button - right (glassmorphism) */}
          <div className="z-30 order-3">
            <Link
-             href="https://calendly.com/videomatecreators/book-a-call-earn-views?month=2025-07"
+             href="/call-booking"
              target="_blank"
              rel="noopener noreferrer"
              className="
