@@ -102,7 +102,7 @@ export default function CaseStudies() {
       </div>
       
       <div className="max-w-6xl mx-auto relative z-10">
-        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 text-[#E7D6FF] to-[#EEEEEE]">This is how we boost our clients' results</h2>
+        <h2 className="text-3xl md:text-5xl font-bold text-center mb-12 text-[#E7D6FF] to-[#EEEEEE]">This is how we boost our clients&apos; results</h2>
         
         {/* Case Studies List - Vertical Layout */}
         <div className="space-y-12">

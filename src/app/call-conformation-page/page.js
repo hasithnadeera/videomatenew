@@ -2,6 +2,7 @@
 
 import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
+import Image from 'next/image';
 
 export default function CallConformationPage() {
   return (
@@ -13,7 +14,7 @@ export default function CallConformationPage() {
         <div className="text-center mb-4 sm:mb-6 md:mb-8 lg:mb-12 ">
           <h1 className="text-3xl md:text-6xl font-bold mb-2 sm:mb-4 mt-2 sm:mt-4 md:mt-8 lg:mt-16 xl:mt-24">
             Congrats On Booking Your Call! <br />
-            <span className="text-gradient text-xl md:text-5xl bg-gradient-to-r from-[#B57FFE] to-[#ECECEC] text-transparent bg-clip-text">Here's What Happens Next</span>
+            <span className="text-gradient text-xl md:text-5xl bg-gradient-to-r from-[#B57FFE] to-[#ECECEC] text-transparent bg-clip-text">Here&apos;s What Happens Next</span>
             <span className="text-white text-xl md:text-5xl"> .....</span>
           </h1>
         </div>
@@ -84,22 +85,23 @@ export default function CallConformationPage() {
         </div>
         {/* w-full px-4 sm:px-6 lg:px-8 mt-[-250px] mb-[-150px] */}
         {/* Comments Section */}
+        {/* Comments Section - Replace img with Image */}
         <div className="w-full px-2 sm:px-4 lg:px-6 mt-[-150px] mb-[-100px]">
           <div className="w-full mx-auto text-center">
             <div className="flex justify-center items-center">
               <div className="w-full" style={{ transform: 'scale(1.2)' }}>
-                <img 
+                <Image 
                   src="/call-conformation-comments.webp"
                   alt="Call Confirmation Comments"
+                  width={1200}
+                  height={800}
                   className="w-full h-auto"
                 />
               </div>
             </div>
           </div>
         </div>
-
       </div>
-      
       <Footer />
     </div>
   );
