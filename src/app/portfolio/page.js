@@ -5,6 +5,7 @@ import Footer from '../components/Footer';
 
 export default function PortfolioPage() {
   const [activeCategory, setActiveCategory] = useState('All');
+  const [showScrollTop, setShowScrollTop] = useState(false);
 
   const portfolioCategories = {
     'Short-Form Videos': {
@@ -97,6 +98,23 @@ export default function PortfolioPage() {
     }
   };
 
+  // Add scroll detection for scroll-to-top button
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  };
+
   const categoryKeys = Object.keys(portfolioCategories);
   const allCategories = ['All', ...categoryKeys];
 
@@ -179,6 +197,29 @@ export default function PortfolioPage() {
         </div>
       </div>
 
+      {/* Scroll to Top Button */}
+      {showScrollTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed bottom-8 right-8 z-50 w-12 h-12 bg-gradient-to-r from-[#B47DFF] to-[#8F5CFF] text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110 flex items-center justify-center group"
+          aria-label="Scroll to top"
+        >
+          <svg 
+            className="w-6 h-6 transform group-hover:-translate-y-0.5 transition-transform duration-200" 
+            fill="none" 
+            stroke="currentColor" 
+            viewBox="0 0 24 24"
+          >
+            <path 
+              strokeLinecap="round" 
+              strokeLinejoin="round" 
+              strokeWidth={2} 
+              d="M5 10l7-7m0 0l7 7m-7-7v18" 
+            />
+          </svg>
+        </button>
+      )}
+
       <Footer />
     </div>
   );
@@ -188,6 +229,7 @@ function VideoCard({ src, aspectRatio }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [isInView, setIsInView] = useState(false);
+  const [loadError, setLoadError] = useState(false);
   const videoRef = useRef(null);
   const containerRef = useRef(null);
 
@@ -201,7 +243,7 @@ function VideoCard({ src, aspectRatio }) {
       },
       {
         threshold: 0.1,
-        rootMargin: '50px'
+        rootMargin: '100px'
       }
     );
 
@@ -213,22 +255,39 @@ function VideoCard({ src, aspectRatio }) {
   }, []);
 
   const handleVideoClick = () => {
-    setIsPlaying(!isPlaying);
+    if (videoRef.current && isLoaded) {
+      if (isPlaying) {
+        videoRef.current.pause();
+      } else {
+        videoRef.current.play().catch(console.error);
+      }
+      setIsPlaying(!isPlaying);
+    }
   };
 
   const handleLoadedData = () => {
+    setIsLoaded(true);
+    setLoadError(false);
+  };
+
+  const handleError = () => {
+    setLoadError(true);
+    setIsLoaded(false);
+  };
+
+  const handleCanPlay = () => {
     setIsLoaded(true);
   };
 
   useEffect(() => {
     if (videoRef.current && isInView) {
-      if (isPlaying) {
-        videoRef.current.play();
+      if (isPlaying && isLoaded) {
+        videoRef.current.play().catch(console.error);
       } else {
         videoRef.current.pause();
       }
     }
-  }, [isPlaying, isInView]);
+  }, [isPlaying, isInView, isLoaded]);
 
   return (
     <div 
@@ -241,44 +300,82 @@ function VideoCard({ src, aspectRatio }) {
           : 'aspect-[9/16]'
       }`}>
         {isInView ? (
-          <video
-            ref={videoRef}
-            src={src}
-            className="w-full h-full object-cover"
-            loop
-            playsInline
-            preload="metadata"
-            onLoadedData={handleLoadedData}
-          />
+          <>
+            <video
+              ref={videoRef}
+              src={src}
+              className="w-full h-full object-cover"
+              loop
+              muted
+              playsInline
+              preload="metadata"
+              onLoadedData={handleLoadedData}
+              onCanPlay={handleCanPlay}
+              onError={handleError}
+              onLoadStart={() => setIsLoaded(false)}
+            />
+            
+            {/* Loading State */}
+            {!isLoaded && !loadError && (
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-800/70">
+                <div className="text-center">
+                  <div className="w-8 h-8 border-2 border-[#B47DFF] border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+                  <p className="text-white/60 text-sm">Loading video...</p>
+                </div>
+              </div>
+            )}
+            
+            {/* Error State */}
+            {loadError && (
+              <div className="absolute inset-0 flex items-center justify-center bg-gray-800/70">
+                <div className="text-center">
+                  <div className="w-8 h-8 text-red-400 mb-2">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </div>
+                  <p className="text-white/60 text-sm">Failed to load</p>
+                  <button 
+                    onClick={() => {
+                      setLoadError(false);
+                      setIsLoaded(false);
+                      if (videoRef.current) {
+                        videoRef.current.load();
+                      }
+                    }}
+                    className="text-[#B47DFF] text-xs mt-1 hover:underline"
+                  >
+                    Retry
+                  </button>
+                </div>
+              </div>
+            )}
+            
+            {/* Play/Pause Overlay */}
+            {isLoaded && (
+              <div 
+                className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 md:opacity-0 transition-opacity duration-300 cursor-pointer"
+                onClick={handleVideoClick}
+              >
+                <div className="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/30">
+                  {isPlaying ? (
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    </svg>
+                  ) : (
+                    <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  )}
+                </div>
+              </div>
+            )}
+          </>
         ) : (
           <div className="w-full h-full bg-gray-800/50 flex items-center justify-center">
-            <div className="w-8 h-8 border-2 border-[#B47DFF] border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        )}
-        
-        {/* Loading State */}
-        {isInView && !isLoaded && (
-          <div className="absolute inset-0 flex items-center justify-center bg-gray-800/50">
-            <div className="w-8 h-8 border-2 border-[#B47DFF] border-t-transparent rounded-full animate-spin"></div>
-          </div>
-        )}
-        
-        {/* Play/Pause Overlay */}
-        {isInView && (
-          <div 
-            className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
-            onClick={handleVideoClick}
-          >
-            <div className="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/30">
-              {isPlaying ? (
-                <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-                </svg>
-              ) : (
-                <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M8 5v14l11-7z"/>
-                </svg>
-              )}
+            <div className="text-center">
+              <div className="w-8 h-8 border-2 border-[#B47DFF] border-t-transparent rounded-full animate-spin mx-auto mb-2"></div>
+              <p className="text-white/60 text-sm">Preparing video...</p>
             </div>
           </div>
         )}
