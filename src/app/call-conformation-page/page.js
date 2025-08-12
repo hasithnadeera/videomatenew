@@ -83,26 +83,33 @@ export default function CallConformationPage() {
             </div>
           </div>
         </div>
-        {/* w-full px-4 sm:px-6 lg:px-8 mt-[-250px] mb-[-150px] */}
-        {/* Comments Section */}
-        {/* Comments Section - Replace img with Image */}
-        <div className="w-full px-2 sm:px-4 lg:px-6 mt-[-150px] mb-[-100px]">
-          <div className="w-full mx-auto text-center">
-            <div className="flex justify-center items-center">
-              <div className="w-full" style={{ transform: 'scale(1.2)' }}>
-                <Image 
-                  src="/call-conformation-comments.webp"
-                  alt="Call Confirmation Comments"
-                  width={1200}
-                  height={800}
-                  className="w-full h-auto"
-                />
+
+        <div className="w-full px-2 sm:px-4 lg:px-6 mt-[-70px] mb-[-50px]"></div>
+        <div className="w-full mx-auto text-center">
+          <div className="w-full px-4 sm:px-6 lg:px-8 mt-8 mb-12 md:mt-12 md:mb-16">
+            <div className="w-full mx-auto text-center overflow-hidden">
+              <div className="flex justify-center items-center">
+                <div className="w-full" style={{ transform: 'scale(1.2)' }}>
+                  <div className="w-full">
+                    <Image
+                      src="/call-conformation-comments.webp"
+                      alt="Call Confirmation Comments"
+                      width={1200}
+                      height={800}
+                      className="w-full h-auto"
+                    />
+                  </div>
+                </div>
               </div>
+
             </div>
           </div>
+          <Footer />
         </div>
+
       </div>
-      <Footer />
     </div>
   );
 }
+
+
