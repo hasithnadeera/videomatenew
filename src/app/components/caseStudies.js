@@ -130,8 +130,15 @@ export default function CaseStudies() {
                   {/* Stars */}
                   <div className="flex">
                     {[...Array(caseStudy.stars)].map((_, i) => (
-                      <svg key={i} className="w-5 h-5 text-purple-400 mr-1" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                        <path d="M9.049 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" /> 
+                      <svg
+                        key={i}
+                        viewBox="0 -0.5 33 33"
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="#B47DFF"
+                        className="w-5 h-5 mr-1"
+                        aria-hidden="true"
+                      >
+                        <polygon points="27.865 31.83 17.615 26.209 7.462 32.009 9.553 20.362 0.99 12.335 12.532 10.758 17.394 0 22.436 10.672 34 12.047 25.574 20.22" />
                       </svg>
                     ))}
                   </div>
