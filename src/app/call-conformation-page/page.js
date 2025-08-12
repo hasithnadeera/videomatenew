@@ -1,4 +1,7 @@
 "use client";
+export const metadata = {
+  robots: { index: false, follow: false },
+};
 
 import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';

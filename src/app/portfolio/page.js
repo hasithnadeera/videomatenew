@@ -1,4 +1,12 @@
 'use client';
+export const metadata = {
+  title: "Portfolio – Real results & case studies",
+  description:
+    "See Videomate’s best-performing edits, MGFX, and UGC that improved ROAS.",
+  alternates: { canonical: "/portfolio" },
+  openGraph: { url: "https://www.videomate.io/portfolio" },
+};
+
 import { useState, useEffect, useRef } from 'react';
 import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
