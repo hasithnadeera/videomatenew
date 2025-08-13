@@ -22,8 +22,8 @@ export default function PortfolioPage() {
     'Facebook Ads': {
       aspectRatio: '9:16',
       videos: [
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%204.mp4', thumbnail: '/portfolioThumbnails/Facebook-1.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%201.mp4', thumbnail: '/portfolioThumbnails/Facebook-2.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%204.mp4', thumbnail: '/portfolioThumbnails/Facebook-2.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%201.mp4', thumbnail: '/portfolioThumbnails/Facebook-1.webp' },
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/3.mp4', thumbnail: '/portfolioThumbnails/Facebook-3.webp' },
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/4.mp4', thumbnail: '/portfolioThumbnails/Facebook-4.webp' },
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%205.mp4', thumbnail: '/portfolioThumbnails/Facebook-5.webp' },
