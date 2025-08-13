@@ -12,21 +12,21 @@ export default function PortfolioPage() {
     'Short-Form Videos': {
       aspectRatio: '9:16',
       videos: [
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/1.mp4', thumbnail: '/portfolioThumbnails/short-1.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/short%20form%202.mp4', thumbnail: '/portfolioThumbnails/short-2.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/short%204.mp4', thumbnail: '/portfolioThumbnails/short-3.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/4.mp4', thumbnail: '/portfolioThumbnails/short-4.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/shortform%201.mp4', thumbnail: '/portfolioThumbnails/short-5.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/1.mp4', thumbnail: '/portfolioThumbnails/Short-1.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/short%20form%202.mp4', thumbnail: '/portfolioThumbnails/Short-2.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/short%204.mp4', thumbnail: '/portfolioThumbnails/Short-3.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/4.mp4', thumbnail: '/portfolioThumbnails/Short-4.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Short-Form%20Videos/shortform%201.mp4', thumbnail: '/portfolioThumbnails/Short-5.webp' },
       ],
     },
     'Facebook Ads': {
       aspectRatio: '9:16',
       videos: [
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%204.mp4', thumbnail: '/portfolioThumbnails/facebook-1.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%201.mp4', thumbnail: '/portfolioThumbnails/facebook-2.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/3.mp4', thumbnail: '/portfolioThumbnails/facebook-3.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/4.mp4', thumbnail: '/portfolioThumbnails/facebook-4.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%205.mp4', thumbnail: '/portfolioThumbnails/facebook-5.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%204.mp4', thumbnail: '/portfolioThumbnails/Facebook-1.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%201.mp4', thumbnail: '/portfolioThumbnails/Facebook-2.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/3.mp4', thumbnail: '/portfolioThumbnails/Facebook-3.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/4.mp4', thumbnail: '/portfolioThumbnails/Facebook-4.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%205.mp4', thumbnail: '/portfolioThumbnails/Facebook-5.webp' },
       ],
     },
     'Animated Explainers': {
@@ -40,27 +40,27 @@ export default function PortfolioPage() {
     'Event Recaps': {
       aspectRatio: '9:16',
       videos: [
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/1.mp4', thumbnail: '/portfolioThumbnails/event-1.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/2.mp4', thumbnail: '/portfolioThumbnails/event-2.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/3.mp4', thumbnail: '/portfolioThumbnails/event-3.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/4.mp4', thumbnail: '/portfolioThumbnails/event-4.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/5.mp4', thumbnail: '/portfolioThumbnails/event-5.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/1.mp4', thumbnail: '/portfolioThumbnails/Event-1.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/2.mp4', thumbnail: '/portfolioThumbnails/Event-2.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/3.mp4', thumbnail: '/portfolioThumbnails/Event-3.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/4.mp4', thumbnail: '/portfolioThumbnails/Event-4.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Event%20Recaps/5.mp4', thumbnail: '/portfolioThumbnails/Event-5.webp' },
       ],
     },
     'Challenges and Competitions': {
       aspectRatio: '16:9',
       videos: [
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/1.mp4', thumbnail: '/portfolioThumbnails/challenges-1.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/2.mp4', thumbnail: '/portfolioThumbnails/challenges-2.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/3.mp4', thumbnail: '/portfolioThumbnails/challenges-3.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/1.mp4', thumbnail: '/portfolioThumbnails/Challenges-1.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/2.mp4', thumbnail: '/portfolioThumbnails/Challenges-2.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Challenges%20and%20Competitions/3.mp4', thumbnail: '/portfolioThumbnails/Challenges-3.webp' },
       ],
     },
     'Long form Youtube videos': {
       aspectRatio: '16:9',
       videos: [
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/homepage%20long.mp4', thumbnail: '/portfolioThumbnails/long-2.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/long%20form%20yt.mp4', thumbnail: '/portfolioThumbnails/long-1.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/3.mp4', thumbnail: '/portfolioThumbnails/long-3.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/homepage%20long.mp4', thumbnail: '/portfolioThumbnails/Long-2.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/long%20form%20yt.mp4', thumbnail: '/portfolioThumbnails/Long-1.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Long%20form%20Youtube%20videos/3.mp4', thumbnail: '/portfolioThumbnails/Long-3.webp' },
       ],
     },
     'Tutorials and How-To Videos': {
@@ -92,7 +92,7 @@ export default function PortfolioPage() {
     VSL: {
       aspectRatio: '16:9',
       videos: [
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/VSL/VSL.mp4', thumbnail: '/portfolioThumbnails/vsl.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/VSL/VSL.mp4', thumbnail: '/portfolioThumbnails/VSL.webp' },
       ],
     },
   };
