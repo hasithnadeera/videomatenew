@@ -20,7 +20,7 @@ export default function CallBookingPage() {
     const handleCalendlyEvent = (e) => {
       if (e.data.event && e.data.event === 'calendly.event_scheduled') {
         // Redirect to confirmation page when event is scheduled
-        router.push('/call-conformation-page');
+        router.push('/call-conformation');
       }
     };
     

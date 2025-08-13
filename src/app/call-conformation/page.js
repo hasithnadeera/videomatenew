@@ -4,7 +4,7 @@ import Footer from '@/app/components/Footer';
 import Navbar from '@/app/components/Navbar';
 import Image from 'next/image';
 
-export default function CallConformation() {
+export default function CallConformationPage() {
   return (
     <div className="min-h-screen text-white overflow-x-hidden">
       <Navbar />
@@ -106,31 +106,18 @@ export default function CallConformation() {
           </div>
         </section>
 
-        {/* Image: smaller on mobile + ALWAYS-visible glow underneath */}
+        {/* Image: smaller on mobile */}
         <section className="mt-4 sm:mt-6">
           <div className="mx-auto w-full px-0 sm:px-6 lg:px-8">
-            {/* isolate creates a new stacking context so z-index works predictably */}
-            <div className="relative isolate mx-auto max-w-[340px] sm:max-w-[560px] md:max-w-[720px] lg:max-w-[900px]">
-              {/* Image */}
+            <div className="mx-auto max-w-[340px] sm:max-w-[560px] md:max-w-[720px] lg:max-w-[900px]">
               <Image
                 src="/call-conformation-comments.webp"
                 alt="Call Confirmation Comments"
                 width={1600}
                 height={1200}
                 sizes="(max-width: 640px) 340px, (max-width: 768px) 560px, (max-width: 1024px) 720px, 900px"
-                className="relative z-10 block w-full h-auto object-contain rounded-xl sm:rounded-2xl !m-0"
+                className="block w-full h-auto object-contain rounded-xl sm:rounded-2xl !m-0"
                 priority
-              />
-
-              {/* Glow (no negative z; sits under image, above background) */}
-              <div
-                className="absolute z-0 left-1/2 -translate-x-1/2 -bottom-5 
-                           w-[80%] max-w-[720px] h-24 sm:h-28 md:h-36 
-                           rounded-full blur-2xl opacity-70"
-                style={{
-                  background:
-                    'radial-gradient(ellipse at center, rgba(180,125,255,0.85), rgba(180,125,255,0) 70%)',
-                }}
               />
             </div>
           </div>
