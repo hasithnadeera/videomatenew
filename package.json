@@ -8,7 +8,8 @@
     "postbuild": "node scripts/build-blog.js",
     "start": "next start",
     "lint": "next lint",
-    "build:blog": "node scripts/build-blog.js"
+    "build:blog": "node scripts/build-blog.js",
+    "export": "next export"
   },
   "dependencies": {
     "@mdx-js/mdx": "^3.1.0",
