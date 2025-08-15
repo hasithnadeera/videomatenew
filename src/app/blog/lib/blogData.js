@@ -99,39 +99,39 @@ export async function getPostBySlug(slug) {
       .replace(/<\/h1>/g, '</span></h1>')
       .replace(/<h2>/g, '<h2 class="text-2xl font-bold mb-4 mt-6"><span class="bg-gradient-to-r from-[#E2CDFF] to-[#B47DFF] bg-clip-text text-transparent">')
       .replace(/<\/h2>/g, '</span></h2>')
-      .replace(/<h3>/g, '<h3 class="text-xl font-bold mb-3 mt-5 text-white">')
+      .replace(/<h3>/g, '<h3 class="text-xl font-bold mb-3 mt-5 text-gray-800">')
       .replace(/<\/h3>/g, '</h3>')
-      .replace(/<h4>/g, '<h4 class="text-lg font-bold mb-2 mt-4 text-white">')
+      .replace(/<h4>/g, '<h4 class="text-lg font-bold mb-2 mt-4 text-gray-800">')
       .replace(/<\/h4>/g, '</h4>')
-      .replace(/<h5>/g, '<h5 class="text-base font-bold mb-2 mt-3 text-white">')
+      .replace(/<h5>/g, '<h5 class="text-base font-bold mb-2 mt-3 text-gray-800">')
       .replace(/<\/h5>/g, '</h5>')
-      .replace(/<h6>/g, '<h6 class="text-sm font-bold mb-2 mt-2 text-white">')
+      .replace(/<h6>/g, '<h6 class="text-sm font-bold mb-2 mt-2 text-gray-800">')
       .replace(/<\/h6>/g, '</h6>')
       
       // Style paragraphs
-      .replace(/<p>/g, '<p class="text-white/90 mb-4 leading-relaxed">')
+      .replace(/<p>/g, '<p class="text-gray-700 mb-4 leading-relaxed">')
       
       // Style lists
-      .replace(/<ul>/g, '<ul class="list-disc list-inside mb-4 text-white/90 space-y-2">')
-      .replace(/<ol>/g, '<ol class="list-decimal list-inside mb-4 text-white/90 space-y-2">')
+      .replace(/<ul>/g, '<ul class="list-disc list-inside mb-4 text-gray-700 space-y-2">')
+      .replace(/<ol>/g, '<ol class="list-decimal list-inside mb-4 text-gray-700 space-y-2">')
       .replace(/<li>/g, '<li class="mb-2">')
       
       // Style links
       .replace(/<a href="/g, '<a href="')
-      .replace(/<a /g, '<a class="text-[#B47DFF] hover:text-[#E2CDFF] underline transition-colors duration-300" target="_blank" rel="noopener noreferrer" ')
+      .replace(/<a /g, '<a class="text-purple-600 hover:text-purple-800 underline transition-colors duration-300" target="_blank" rel="noopener noreferrer" ')
       
       // Style strong/bold
-      .replace(/<strong>/g, '<strong class="font-bold text-white">')
+      .replace(/<strong>/g, '<strong class="font-bold text-gray-800">')
       
       // Style emphasis/italic
-      .replace(/<em>/g, '<em class="italic text-white">')
+      .replace(/<em>/g, '<em class="italic text-gray-800">')
       
       // Style blockquotes
-      .replace(/<blockquote>/g, '<blockquote class="border-l-4 border-[#B47DFF] pl-4 italic text-white/90 my-4">')
+      .replace(/<blockquote>/g, '<blockquote class="border-l-4 border-purple-500 pl-4 italic text-gray-600 my-4">')
       
       // Style code blocks
-      .replace(/<pre><code>/g, '<pre class="bg-white/10 rounded-lg p-4 mb-4 overflow-x-auto"><code class="text-sm font-mono text-white">')
-      .replace(/<code>/g, '<code class="bg-white/10 px-2 py-1 rounded text-sm font-mono text-white">');
+      .replace(/<pre><code>/g, '<pre class="bg-gray-100 rounded-lg p-4 mb-4 overflow-x-auto"><code class="text-sm font-mono text-gray-800">')
+      .replace(/<code>/g, '<code class="bg-gray-100 px-2 py-1 rounded text-sm font-mono text-gray-800">');
     
     // Handle custom MDX components by converting them to HTML
     // Replace <Callout> components
@@ -177,7 +177,8 @@ export async function getPostBySlug(slug) {
       id: `mdx-${slug}`,
       slug,
       ...data,
-      content: htmlContent // Return compiled HTML with proper styling
+      content: htmlContent, // Return compiled HTML with proper styling
+      finalThoughts: data.finalThoughts || ''
     };
   } catch (error) {
     console.error(`Error fetching post ${slug}:`, error);

@@ -9,7 +9,8 @@ export default function Navbar() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const router = useRouter();
   const pathname = usePathname();
-  
+  const isBlogPage = pathname.startsWith('/blog');
+
   const scrollToSection = (sectionId) => {
     // Close mobile menu if open
     if (mobileMenuOpen) {
@@ -71,10 +72,10 @@ export default function Navbar() {
           className="transition-all duration-300 ease-in-out hover:scale-105 focus:outline-none relative z-50"
         >
           <Image 
-             src="/logo.png" 
-             alt="Videomate Logo" 
-             width={150} 
-             height={30} 
+             src={isBlogPage ? "/logo-black.svg" : "/logo.png"}
+             alt="Videomate Logo"
+             width={150}
+             height={30}
              className={`object-contain transition-all duration-500 ease-in-out ${mobileMenuOpen ? 'opacity-0' : 'opacity-100'}`}
              style={{ transitionDelay: mobileMenuOpen ? '200ms' : '0ms' }}
            />
@@ -92,10 +93,10 @@ export default function Navbar() {
              ></div>
             <Link href="/">
               <Image 
-               src="/logo.png" 
-               alt="Videomate Logo" 
-               width={180} 
-               height={36} 
+               src={isBlogPage ? "/logo-black.svg" : "/logo.png"}
+               alt="Videomate Logo"
+               width={180}
+               height={36}
                className="object-contain relative z-10"
              />
             </Link>
