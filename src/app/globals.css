@@ -26,10 +26,33 @@ body {
   overflow-x: hidden;
 }
 
+.blog-page-body {
+  color: black;
+}
+
 .gradient-border {
   position: relative;
   z-index: 1;
   background: transparent;
+}
+
+.blog-page-body main h1,
+.blog-page-body main h2,
+.blog-page-body main h3,
+.blog-page-body main h4,
+.blog-page-body main h5,
+.blog-page-body main h6 {
+  color: #4c1d95; /* dark purple */
+}
+
+.blog-page-body main p,
+.blog-page-body main li,
+.blog-page-body main span {
+  color: black;
+}
+
+.blog-page-body main time {
+  color: black !important;
 }
 .gradient-border::before {
   content: '';

@@ -20,6 +20,21 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
+## Blog System
+
+This project includes a comprehensive SEO-optimized blog system with the following features:
+
+- MDX support for rich content creation
+- Dynamic sitemap and RSS feed generation
+- Tagging and categorization system
+- Search functionality
+- Related posts recommendations
+- Social media sharing integration
+- Mobile-responsive design
+- GitHub Actions deployment pipeline
+
+The blog is located at `/blog` and includes both dynamic posts and MDX posts.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

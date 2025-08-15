@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
+import { useState, use } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -104,10 +104,12 @@ export default function Navbar() {
          {/* Centered Nav Links - Desktop */}
          <div className="order-2 z-10">
            <div className="flex bg-white/10 backdrop-blur-[60px] rounded-full px-8 py-2 border border-[#CFADFF] shadow-sm font-bold text-lg relative">
-             <NavLink href="#" onClick={() => scrollToSection('home')}>Home</NavLink>
-             <NavLink href="/portfolio" onClick={handlePortfolioClick}>Portfolio</NavLink>
-             <NavLink href="#" onClick={() => scrollToSection('testimonials')}>Testimonials</NavLink>
-             <NavLink href="#" onClick={() => scrollToSection('FAQ')}>FAQs</NavLink>
+             <NavLink href="#" onClick={() => scrollToSection('home')} pathname={pathname}>Home</NavLink>
+             <NavLink href="/portfolio" onClick={handlePortfolioClick} pathname={pathname}>Portfolio</NavLink>
+             
+             <NavLink href="#" onClick={() => scrollToSection('testimonials')} pathname={pathname}>Testimonials</NavLink>
+             <NavLink href="#" onClick={() => scrollToSection('FAQ')} pathname={pathname}>FAQs</NavLink>
+             <NavLink href="/blog" pathname={pathname}>Blog</NavLink>
            </div>
          </div>
  
@@ -199,16 +201,20 @@ export default function Navbar() {
             }}
           >
             <div className="transition-all duration-300 ease-in-out" style={{ transitionDelay: '150ms', opacity: mobileMenuOpen ? 1 : 0, transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)' }}>
-              <NavLink href="#" onClick={() => scrollToSection('home')}>Home</NavLink>
+              <NavLink href="#" onClick={() => scrollToSection('home')} pathname={pathname}>Home</NavLink>
             </div>
             <div className="transition-all duration-300 ease-in-out" style={{ transitionDelay: '200ms', opacity: mobileMenuOpen ? 1 : 0, transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)' }}>
-              <NavLink href="/portfolio" onClick={handlePortfolioClick}>Portfolio</NavLink>
+              <NavLink href="/portfolio" onClick={handlePortfolioClick} pathname={pathname}>Portfolio</NavLink>
+            </div>
+            
+            <div className="transition-all duration-300 ease-in-out" style={{ transitionDelay: '300ms', opacity: mobileMenuOpen ? 1 : 0, transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)' }}>
+              <NavLink href="#" onClick={() => scrollToSection('testimonials')} pathname={pathname}>Testimonials</NavLink>
+            </div>
+            <div className="transition-all duration-300 ease-in-out" style={{ transitionDelay: '350ms', opacity: mobileMenuOpen ? 1 : 0, transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)' }}>
+              <NavLink href="#" onClick={() => scrollToSection('FAQ')} pathname={pathname}>FAQs</NavLink>
             </div>
             <div className="transition-all duration-300 ease-in-out" style={{ transitionDelay: '250ms', opacity: mobileMenuOpen ? 1 : 0, transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)' }}>
-              <NavLink href="#" onClick={() => scrollToSection('testimonials')}>Testimonials</NavLink>
-            </div>
-            <div className="transition-all duration-300 ease-in-out" style={{ transitionDelay: '300ms', opacity: mobileMenuOpen ? 1 : 0, transform: mobileMenuOpen ? 'translateY(0)' : 'translateY(-10px)' }}>
-              <NavLink href="#" onClick={() => scrollToSection('FAQ')}>FAQs</NavLink>
+              <NavLink href="/blog" pathname={pathname}>Blog</NavLink>
             </div>
           </div>
         </div>
@@ -217,7 +223,7 @@ export default function Navbar() {
   );
 }
 
-function NavLink({ href, children, active, onClick }) {
+function NavLink({ href, children, active, onClick, pathname }) {
   const handleClick = (e) => {
     if (onClick) {
       e.preventDefault();
@@ -225,14 +231,19 @@ function NavLink({ href, children, active, onClick }) {
     }
   };
 
+  // Check if we're on a blog page
+  const isBlogPage = pathname && pathname.startsWith('/blog');
+  
   return (
     <Link
       href={href}
       onClick={handleClick}
-      className={`px-5 py-2 rounded-full font-semibold transition 
+      className={`px-5 py-2 rounded-full font-semibold transition
         ${active
-          ? "text-purple-300"
-          : "text-white/90 hover:text-purple-300"
+          ? "text-purple-800"
+          : isBlogPage
+            ? "text-purple-800"
+            : "text-white/90 hover:text-purple-300"
         }`}
     >
       {children}
