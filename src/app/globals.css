@@ -1,0 +1,112 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-poppins);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: linear-gradient(to bottom, #150A28, #000000);
+  color: var(--foreground);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.blog-page-body {
+  color: black;
+}
+
+.gradient-border {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
+.blog-page-body main h1,
+.blog-page-body main h2,
+.blog-page-body main h3,
+.blog-page-body main h4,
+.blog-page-body main h5,
+.blog-page-body main h6 {
+  color: #4c1d95; /* dark purple */
+}
+
+.blog-page-body main p,
+.blog-page-body main li,
+.blog-page-body main span {
+  color: black;
+}
+
+.blog-page-body main time {
+  color: black !important;
+}
+.gradient-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  z-index: -1;
+  background: linear-gradient(90deg, #CFADFF 0%, #fff 100%);
+  padding: 0;
+  /* Show only the border using masking */
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+.gradient-border > * {
+  position: relative;
+  z-index: 1;
+}
+@keyframes glow {
+  0%, 100% { opacity: 0.2; }
+  50% { opacity: 0.4; }
+}
+.animate-glow {
+  animation: glow 5s ease-in-out infinite;
+}
+
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll-rtl {
+  animation: scroll-right-to-left 120s linear infinite;
+  display: flex;
+  width: max-content;
+}
+
+.animate-scroll-rtl:hover {
+  animation-play-state: paused;
+}
+
+/* Add this to hide scrollbars */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
