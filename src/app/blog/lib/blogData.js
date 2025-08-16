@@ -1,6 +1,5 @@
 // Blog data utility
 
-"use server";
 import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';

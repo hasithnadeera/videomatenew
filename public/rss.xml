@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>Videomate Blog</title>
+    <description>Insights, tutorials, and industry news to help you create compelling video content</description>
+    <link>https://www.videomate.io/blog</link>
+    <language>en-us</language>
+    <lastBuildDate>2025-08-16T12:39:41.279Z</lastBuildDate>
+    <pubDate>2025-08-16T12:39:41.279Z</pubDate>
+    <ttl>60</ttl>
+    <item>
+      <title><![CDATA[Getting Started with Video Editing]]></title>
+      <description><![CDATA[Learn the basics of video editing and how to create compelling content for your brand.]]></description>
+      <link>https://www.videomate.io/blog/getting-started-with-video-editing</link>
+      <guid>https://www.videomate.io/blog/getting-started-with-video-editing</guid>
+      <pubDate>2025-08-10T00:00:00.000Z</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[5 Tips to Improve Your Social Media Content]]></title>
+      <description><![CDATA[Discover how to create engaging social media content that drives results for your business.]]></description>
+      <link>https://www.videomate.io/blog/5-tips-to-improve-social-media-content</link>
+      <guid>https://www.videomate.io/blog/5-tips-to-improve-social-media-content</guid>
+      <pubDate>2025-08-05T00:00:00.000Z</pubDate>
+    </item>
+    <item>
+      <title><![CDATA[The Future of Video Marketing]]></title>
+      <description><![CDATA[Explore the latest trends and predictions for video marketing in the coming years.]]></description>
+      <link>https://www.videomate.io/blog/future-of-video-marketing</link>
+      <guid>https://www.videomate.io/blog/future-of-video-marketing</guid>
+      <pubDate>2025-08-01T00:00:00.000Z</pubDate>
+    </item>
+  </channel>
+</rss>
