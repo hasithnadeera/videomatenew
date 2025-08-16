@@ -3,7 +3,14 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import BlogPost from '../../components/BlogPost';
-import { getAllPosts } from '../../lib/blogData';
+import { getAllPosts, getAllCategories } from '../../lib/blogData';
+
+export async function generateStaticParams() {
+  const categories = await getAllCategories();
+  return categories.map((category) => ({
+    category: category.slug,
+  }));
+}
 
 export default function CategoryArchivePage({ params }) {
   const [posts, setPosts] = useState([]);

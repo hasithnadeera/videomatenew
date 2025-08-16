@@ -3,7 +3,14 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import BlogPost from '../../components/BlogPost';
-import { getAllPosts } from '../../lib/blogData';
+import { getAllPosts, getAllTags } from '../../lib/blogData';
+
+export async function generateStaticParams() {
+  const tags = await getAllTags();
+  return tags.map((tag) => ({
+    tag: tag.slug,
+  }));
+}
 
 export default function TagArchivePage({ params }) {
   const [posts, setPosts] = useState([]);
