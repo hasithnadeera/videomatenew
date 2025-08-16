@@ -2,8 +2,8 @@
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import BlogPost from '../../../components/BlogPost';
-import { getAllPosts } from '../../../lib/blogData';
+import BlogPost from '../../components/BlogPost';
+import { getAllPosts } from '../../lib/blogData';
 
 export default function CategoryArchivePage({ params }) {
   const [posts, setPosts] = useState([]);

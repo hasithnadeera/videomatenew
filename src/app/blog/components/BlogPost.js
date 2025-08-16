@@ -4,8 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export default function BlogPost({ post }) {
-  const isMdxPost = post.id && String(post.id).startsWith('mdx-');
-  const postUrl = isMdxPost ? `/blog/mdx/${post.slug}` : `/blog/${post.slug}`;
+  const postUrl = `/blog/${post.slug}`;
 
   return (
     <Link href={postUrl} className="block group">

@@ -1,6 +1,6 @@
 import Link from 'next/link';
 // This import should work if MDX is configured correctly
-import TestMDXContent from '../content/posts/test-mdx.mdx';
+import TestMDXContent from '../content/posts/test.mdx';
 
 export default function TestDirectMDXPage() {
   return (

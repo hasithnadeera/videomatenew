@@ -88,8 +88,8 @@ export default function Navbar() {
          <div className="flex items-center z-20 order-1">
            <div className="relative">
              <div 
-               className="absolute inset-0 rounded-full blur-md animate-glow hidden md:block" 
-               style={{ backgroundColor: '#B57FFE', opacity: 0.6 }}
+               className="absolute inset-0 rounded-full blur-md hidden md:block"
+               style={{ backgroundColor: '#B57FFE', opacity: 0.3 }}
              ></div>
             <Link href="/">
               <Image 
