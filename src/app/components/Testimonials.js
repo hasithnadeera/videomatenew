@@ -106,16 +106,6 @@ export default function Testimonials({ onPlayPause, isPlaying }) {
         </div>
       </div>
 
-      {/* Play/Resume Button */}
-      <div className="text-center my-8">
-        <button
-          onClick={onPlayPause}
-          className="bg-gradient-to-r from-[#B47DFF] to-[#8F5CFF] text-white font-semibold text-lg px-8 py-3 rounded-full shadow-lg transition hover:brightness-110"
-        >
-          {isPlaying ? 'Pause' : 'Play'}
-        </button>
-      </div>
-
       {/* Integration Tools Section */}
       <div className="max-w-6xl mx-auto relative z-10">
         <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-center mb-8 md:mb-12 text-white drop-shadow-2xl md:drop-shadow-none">Seamless Integration</h3>
