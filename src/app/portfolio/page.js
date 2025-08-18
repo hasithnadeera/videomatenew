@@ -29,6 +29,21 @@ export default function PortfolioPage() {
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%205.mp4', thumbnail: '/portfolioThumbnails/Facebook-5.webp' },
       ],
     },
+    'UGC': {
+      aspectRatio: '9:16',
+      videos: [
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonilas%203.mp4', thumbnail: '/portfolioThumbnails/Testimonials-1.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonilas%201.mp4', thumbnail: '/portfolioThumbnails/Testimonials-2.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonials%204.mp4', thumbnail: '/portfolioThumbnails/Testimonials-3.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/UGC%2001.mp4', thumbnail: '/portfolioThumbnails/Testimonials-4.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/UGC%2003.mp4', thumbnail: '/portfolioThumbnails/Testimonials-5.webp' },
+      ],
+    },
+     'Still Images': {
+      videos: [
+        { src: '/stills.webp', thumbnail: '/stills.webp', isImage: true },
+      ],
+    },
     'Animated Explainers': {
       aspectRatio: '16:9',
       videos: [
@@ -71,16 +86,7 @@ export default function PortfolioPage() {
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Tutorials%20and%20How-To%20Videos/tutorial.mp4', thumbnail: '/portfolioThumbnails/Tutorials-3.webp' },
       ],
     },
-    'User Testimonials': {
-      aspectRatio: '9:16',
-      videos: [
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonilas%203.mp4', thumbnail: '/portfolioThumbnails/Testimonials-1.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonilas%201.mp4', thumbnail: '/portfolioThumbnails/Testimonials-2.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonials%204.mp4', thumbnail: '/portfolioThumbnails/Testimonials-3.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/UGC%2001.mp4', thumbnail: '/portfolioThumbnails/Testimonials-4.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/UGC%2003.mp4', thumbnail: '/portfolioThumbnails/Testimonials-5.webp' },
-      ],
-    },
+    
     'Vlogs and Day in the life videos': {
       aspectRatio: '16:9',
       videos: [
@@ -95,11 +101,7 @@ export default function PortfolioPage() {
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/VSL/VSL.mp4', thumbnail: '/portfolioThumbnails/VSL.webp' },
       ],
     },
-    'Still Images': {
-      videos: [
-        { src: '/stills.webp', thumbnail: '/stills.webp', isImage: true },
-      ],
-    },
+   
   };
 
   const categoryKeys = Object.keys(portfolioCategories);
