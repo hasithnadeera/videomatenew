@@ -100,7 +100,7 @@ const GifCard = ({ src }) => {
 
   return (
     <div
-      className="flex-shrink-0 w-[160px] h-[284px] md:w-[215px] md:h-[382px] rounded-xl shadow-lg overflow-hidden 
+      className="flex-shrink-0 w-[160px] h-[284px] md:w-[215px] md:h-[382px] rounded-xl shadow-lg overflow-hidden  
         transform transition-transform duration-300 hover:scale-105 hover:-translate-y-1 relative"
     >
       <Image

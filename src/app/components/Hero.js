@@ -1,6 +1,10 @@
 import Image from 'next/image';
+import VideoPlayer from './VideoPlayer';
 
-export default function Hero() {
+export default function Hero({ videoRef, onPlayPause, isPlaying }) {
+  const videoSrc = "https://grtomatemedia.b-cdn.net/Videomate%20VSL1.mp4";
+  const thumbnail = "/vslThumbnail.jpg";
+
   return (
     <section className="w-full flex flex-col items-center justify-center px-8 pt-34 md:pt-36 bg-transparent">
       {/* Headline */}
@@ -13,12 +17,34 @@ export default function Hero() {
       <p className="w-full text-xs md:text-lg text-center text-white mt-2 mb-6 md:mb-8">
         Videomate edits your videos in 24–48 hours. One flat rate. No surprises.
       </p>
-
+      <div className="w-full max-w-4xl mx-auto relative">
+        <VideoPlayer ref={videoRef} src={videoSrc} poster={thumbnail} title="Videomate Promotional Video" />
+        <button
+          className="absolute inset-0 flex items-center justify-center"
+          onClick={onPlayPause}
+          onKeyDown={(e) => e.key === 'Enter' && onPlayPause()}
+          aria-label={isPlaying ? "Pause video" : "Play video"}
+          aria-pressed={isPlaying}
+          tabIndex={0}
+        >
+          <div className={`w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg ${isPlaying ? 'opacity-0 hover:opacity-100' : 'opacity-100'}`}>
+            {isPlaying ? (
+              <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                <path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z" />
+              </svg>
+            ) : (
+              <svg className="w-4 h-4 md:w-5 md:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+              </svg>
+            )}
+          </div>
+        </button>
+      </div>
       {/* CTA Button */}
       <a
         target="_blank"
         href="/call-booking"
-        className="bg-gradient-to-r from-[#B47DFF] to-[#8F5CFF] text-white font-semibold text-base px-6 py-2.5 rounded-full shadow-md transition hover:brightness-110 backdrop-blur-xl bg-white/10 border border-white/20"
+        className="bg-gradient-to-r from-[#B47DFF] to-[#8F5CFF] text-white font-semibold text-base px-6 py-2.5 mt-6 rounded-full shadow-md transition hover:brightness-110 backdrop-blur-xl bg-white/10 border border-white/20"
       >
         Start 7-Day Free Trial
       </a>

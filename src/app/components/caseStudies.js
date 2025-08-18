@@ -27,7 +27,7 @@ export default function CaseStudies() {
       logo: '/bigvu.svg',
       description: 'World no 1 teleprompter app',
       testimonial: '"Videomate helped us create and generate $780,000 through their ads."',
-      videoUrl: 'https://grtomatemedia.b-cdn.net/philippe%20testimonial.mp4',
+      videoUrl: 'https://www.loom.com/share/e26951bec2b3494f9efa31ba9a715f59?sid=9e4d8645-46eb-48cf-8a51-d5ab1461219b',
       stars: 5
     },
     {
@@ -36,7 +36,7 @@ export default function CaseStudies() {
       logo: '/magal.svg', 
       description: 'Luxury jewelry brand',
       testimonial: '"Our conversion rates increased by 45% after implementing Videomate videos."',
-      videoUrl: 'https://grtomatemedia.b-cdn.net/philippe%20testimonial.mp4',
+      videoUrl: ' ',
       stars: 5
     },
     {
@@ -152,56 +152,65 @@ export default function CaseStudies() {
                 {/* Right Column - Video */}
                 <div className="rounded-xl overflow-hidden aspect-video bg-black/40 relative">
                   {caseStudy.videoUrl ? (
-                    <>
-                      <video 
-                        className="w-full h-full object-cover"
-                        ref={el => videoRefs.current[caseStudy.id] = el}
-                        poster="/caseStidiesThumbnail.svg"
-                        onEnded={() => setPlayingVideos(prev => ({ ...prev, [caseStudy.id]: false }))}
-                      >
-                        <source src={caseStudy.videoUrl} type="video/mp4" />
-                        Your browser does not support the video tag.
-                      </video>
-                      
-                      {/* Fullscreen Button */}
-                      <button 
-                        className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg z-10"
-                        onClick={() => {
-                          const videoElement = videoRefs.current[caseStudy.id];
-                          if (videoElement) {
-                            if (videoElement.requestFullscreen) {
-                              videoElement.requestFullscreen();
-                            } else if (videoElement.webkitRequestFullscreen) {
-                              videoElement.webkitRequestFullscreen();
-                            } else if (videoElement.msRequestFullscreen) {
-                              videoElement.msRequestFullscreen();
+                    caseStudy.videoUrl.includes('loom.com') ? (
+                      <iframe
+                        src={`https://www.loom.com/embed/${caseStudy.videoUrl.split('/').pop().split('?')[0]}`}
+                        frameBorder="0"
+                        allowFullScreen
+                        className="w-full h-full"
+                      ></iframe>
+                    ) : (
+                      <>
+                        <video
+                          className="w-full h-full object-cover"
+                          ref={el => videoRefs.current[caseStudy.id] = el}
+                          poster="/caseStidiesThumbnail.svg"
+                          onEnded={() => setPlayingVideos(prev => ({ ...prev, [caseStudy.id]: false }))}
+                        >
+                          <source src={caseStudy.videoUrl} type="video/mp4" />
+                          Your browser does not support the video tag.
+                        </video>
+                        
+                        {/* Fullscreen Button */}
+                        <button
+                          className="absolute top-4 right-4 w-8 h-8 bg-white/10 backdrop-blur-md border border-white/20 rounded-lg flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg z-10"
+                          onClick={() => {
+                            const videoElement = videoRefs.current[caseStudy.id];
+                            if (videoElement) {
+                              if (videoElement.requestFullscreen) {
+                                videoElement.requestFullscreen();
+                              } else if (videoElement.webkitRequestFullscreen) {
+                                videoElement.webkitRequestFullscreen();
+                              } else if (videoElement.msRequestFullscreen) {
+                                videoElement.msRequestFullscreen();
+                              }
                             }
-                          }
-                        }}
-                        aria-label="Enter fullscreen"
-                        tabIndex={0}
-                      >
-                        <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                        </svg>
-                      </button>
-                      
-                      {/* Custom Play Button Overlay using the provided design */}
-                      <button 
-                        className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${playingVideos[caseStudy.id] ? 'opacity-0' : 'opacity-100'}`} 
-                        onClick={() => togglePlay(caseStudy.id)} 
-                        onKeyDown={(e) => e.key === 'Enter' && togglePlay(caseStudy.id)} 
-                        aria-label={playingVideos[caseStudy.id] ? "Pause video" : "Play video"} 
-                        aria-pressed={playingVideos[caseStudy.id]} 
-                        tabIndex={0} 
-                      > 
-                        <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg"> 
-                          <svg className="w-4 h-4 md:w-5 md:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true"> 
-                            <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" /> 
-                          </svg> 
-                        </div> 
-                      </button>
-                    </>
+                          }}
+                          aria-label="Enter fullscreen"
+                          tabIndex={0}
+                        >
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                          </svg>
+                        </button>
+                        
+                        {/* Custom Play Button Overlay using the provided design */}
+                        <button
+                          className={`absolute inset-0 flex items-center justify-center transition-opacity duration-300 ${playingVideos[caseStudy.id] ? 'opacity-0' : 'opacity-100'}`}
+                          onClick={() => togglePlay(caseStudy.id)}
+                          onKeyDown={(e) => e.key === 'Enter' && togglePlay(caseStudy.id)}
+                          aria-label={playingVideos[caseStudy.id] ? "Pause video" : "Play video"}
+                          aria-pressed={playingVideos[caseStudy.id]}
+                          tabIndex={0}
+                        >
+                          <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg">
+                            <svg className="w-4 h-4 md:w-5 md:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                              <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+                            </svg>
+                          </div>
+                        </button>
+                      </>
+                    )
                   ) : (
                     <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-purple-900/40 to-black/40">
                       <p className="text-white/70 text-center px-4">Case study video coming soon</p>

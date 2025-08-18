@@ -7,7 +7,7 @@ import ErrorBoundary from './ErrorBoundary';
 // Lazy load the TestimonialCard component
 const TestimonialCard = lazy(() => import('./TestimonialCard'));
 
-export default function Testimonials() {
+export default function Testimonials({ onPlayPause, isPlaying }) {
   // Using testimonials data from constants
   const testimonials = TESTIMONIALS_DATA;
 
@@ -104,6 +104,16 @@ export default function Testimonials() {
             </ErrorBoundary>
           </div>
         </div>
+      </div>
+
+      {/* Play/Resume Button */}
+      <div className="text-center my-8">
+        <button
+          onClick={onPlayPause}
+          className="bg-gradient-to-r from-[#B47DFF] to-[#8F5CFF] text-white font-semibold text-lg px-8 py-3 rounded-full shadow-lg transition hover:brightness-110"
+        >
+          {isPlaying ? 'Pause' : 'Play'}
+        </button>
       </div>
 
       {/* Integration Tools Section */}

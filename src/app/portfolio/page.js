@@ -95,6 +95,11 @@ export default function PortfolioPage() {
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/VSL/VSL.mp4', thumbnail: '/portfolioThumbnails/VSL.webp' },
       ],
     },
+    'Still Images': {
+      videos: [
+        { src: '/stills.webp', thumbnail: '/stills.webp', isImage: true },
+      ],
+    },
   };
 
   const categoryKeys = Object.keys(portfolioCategories);
@@ -161,10 +166,13 @@ export default function PortfolioPage() {
               </h2>
 
               <div
-                className={`grid gap-8 justify-items-center ${portfolioCategories[category].aspectRatio === '16:9'
+                className={`grid gap-8 justify-items-center ${
+                  category === 'Still Images'
+                    ? 'grid-cols-1'
+                    : portfolioCategories[category].aspectRatio === '16:9'
                     ? 'grid-cols-1 md:grid-cols-2 lg:grid-cols-2'
                     : 'grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5'
-                  }`}
+                }`}
               >
                 {portfolioCategories[category].videos.map((video, index) => (
                   <VideoCard
@@ -189,22 +197,35 @@ function VideoCard({ video, aspectRatio }) {
   const isObj = typeof video === 'object' && video !== null;
   const src = isObj ? video.src : video;
   const thumbnail = isObj && video.thumbnail ? video.thumbnail : null;
+  const isImage = isObj && video.isImage;
 
-  const handleClick = () => setShowVideo((s) => !s);
+  const handleClick = () => {
+    if (!isImage) {
+      setShowVideo((s) => !s);
+    }
+  };
 
   return (
     <div
-      className="group relative overflow-hidden rounded-2xl bg-gray-900/50 backdrop-blur-xl border border-[#CFADFF]/20 hover:border-[#CFADFF]/40 transition-all duration-300 hover:scale-105 hover:shadow-2xl cursor-pointer w-full max-w-[420px]"
+      className={`group relative overflow-hidden rounded-2xl bg-gray-900/50 backdrop-blur-xl border border-[#CFADFF]/20 transition-all duration-300 w-full ${isImage ? 'max-w-4xl' : 'hover:border-[#CFADFF]/40 hover:scale-105 hover:shadow-2xl cursor-pointer max-w-[420px]'}`}
       onClick={handleClick}
     >
-      <div className={`relative ${aspectRatio === '16:9' ? 'aspect-video' : 'aspect-[9/16]'}`}>
-        {showVideo ? (
+      <div className={`relative ${aspectRatio === '16:9' ? 'aspect-video' : ''} ${aspectRatio === '9:16' ? 'aspect-[9/16]' : ''}`}>
+        {isImage ? (
+          <Image
+            src={src}
+            alt="Still image"
+            width={1200}
+            height={675}
+            className="w-full h-auto"
+            sizes="100vw"
+            priority={false}
+          />
+        ) : showVideo ? (
           <video
             src={src}
             className="w-full h-full object-cover"
-
             autoPlay
-
             loop
             playsInline
             poster={thumbnail || undefined}
@@ -226,7 +247,7 @@ function VideoCard({ video, aspectRatio }) {
         )}
 
         {/* Play Button Overlay */}
-        {!showVideo && (
+        {!showVideo && !isImage && (
           <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
             <div className="w-12 h-12 bg-white/20 backdrop-blur-xl rounded-full flex items-center justify-center border border-white/30">
               <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
