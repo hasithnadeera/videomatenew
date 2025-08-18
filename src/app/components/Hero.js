@@ -17,7 +17,7 @@ export default function Hero({ videoRef, onPlayPause, isPlaying }) {
       <p className="w-full text-xs md:text-lg text-center text-white mt-2 mb-6 md:mb-8">
         Videomate edits your videos in 24–48 hours. One flat rate. No surprises.
       </p>
-      <div className="w-full max-w-4xl mx-auto relative">
+     {/* <div className="w-full max-w-4xl mx-auto relative">
         <VideoPlayer ref={videoRef} src={videoSrc} poster={thumbnail} title="Videomate Promotional Video" />
         <button
           className="absolute inset-0 flex items-center justify-center"
@@ -39,7 +39,7 @@ export default function Hero({ videoRef, onPlayPause, isPlaying }) {
             )}
           </div>
         </button>
-      </div>
+      </div> */}
       {/* CTA Button */}
       <a
         target="_blank"
