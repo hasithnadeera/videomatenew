@@ -1,45 +1,32 @@
 'use client';
-import React, { forwardRef, useImperativeHandle, useRef } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
-const VideoPlayer = forwardRef(({ src, title = 'Embedded Video', poster }, ref) => {
-  const videoRef = useRef(null);
 
-  useImperativeHandle(ref, () => ({
-    play: () => {
-      console.log("Attempting to play video");
-      videoRef.current.play();
-    },
-    pause: () => {
-      console.log("Attempting to pause video");
-      videoRef.current.pause();
-    },
-  }));
-
+const VideoPlayer = ({ src, title = 'Embedded Video' }) => {
   if (!src) {
-    return <div className="bg-gray-200 aspect-video rounded-2xl flex items-center justify-center"><p>Video source is missing.</p></div>;
+    return (
+      <div className="bg-gray-200 aspect-video rounded-2xl flex items-center justify-center">
+        <p>Video source is missing.</p>
+      </div>
+    );
   }
 
   return (
-    <div className="aspect-video w-full relative">
-      <video
-        ref={videoRef}
-        src={src}
+    <div style={{position:'relative',paddingTop:'56.25%'}}>
+      <iframe 
+        src={`${src}?rel=0&autoplay=1&mute=1`}
+        style={{border:0,position:'absolute',top:0,height:'100%',width:'100%', borderRadius: '1rem'}}
+        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+        allowFullScreen={true}
         title={title}
-        poster={poster}
-        preload="auto"
-        playsInline
-        className="absolute top-0 left-0 w-full h-full border-0 rounded-2xl"
-      ></video>
+      ></iframe>
     </div>
   );
-});
-
-VideoPlayer.displayName = 'VideoPlayer';
+};
 
 VideoPlayer.propTypes = {
   src: PropTypes.string.isRequired,
   title: PropTypes.string,
-  poster: PropTypes.string,
 };
 
 export default VideoPlayer;

@@ -1,18 +1,16 @@
 'use client';
 import React, { useState, useEffect } from "react";
-import { useRouter } from 'next/navigation';
 import ComparisonCard from './ComparisonCard';
 import { COMPARISON_DATA } from '../constants';
 
 export default function PricingSection() {
-  const router = useRouter();
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
   const [scrollContainer, setScrollContainer] = useState(null);
 
-  // Add click handler for redirecting to the call-booking page
+  // Add click handler for redirecting to Calendly
   const handlePricingCardClick = () => {
-    window.open('/call-booking', '_blank');
+    window.open('https://calendly.com/videomatecreators/book-a-call-earn-views?month=2025-07', '_blank');
   };
 
   const pricingPlans = [

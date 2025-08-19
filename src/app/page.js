@@ -17,27 +17,12 @@ import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
 export default function Home() {
-  const videoRef = useRef(null);
-  const [isPlaying, setIsPlaying] = React.useState(false);
-
-  const handlePlayPause = () => {
-    if (videoRef.current) {
-      if (isPlaying) {
-        videoRef.current.pause();
-        setIsPlaying(false);
-      } else {
-        videoRef.current.play();
-        setIsPlaying(true);
-      }
-    }
-  };
-
   return (
     <div className="font-sans min-h-screen bg-gradient-to-b from-[#150A28] to-black">
       <Navbar />
       <main>
         <div id="home">
-          <Hero videoRef={videoRef} onPlayPause={handlePlayPause} isPlaying={isPlaying} />
+          <Hero />
         </div>
         <div id="portfolio">
           <Portfolio />
@@ -48,7 +33,7 @@ export default function Home() {
         <CaseStudies />
         <PricingSection />
         <div id="testimonials">
-          <Testimonials onPlayPause={handlePlayPause} isPlaying={isPlaying} />
+          <Testimonials />
         </div>
         <div id="FAQ">
           <FAQ />

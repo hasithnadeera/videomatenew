@@ -7,7 +7,7 @@ import ErrorBoundary from './ErrorBoundary';
 // Lazy load the TestimonialCard component
 const TestimonialCard = lazy(() => import('./TestimonialCard'));
 
-export default function Testimonials({ onPlayPause, isPlaying }) {
+export default function Testimonials() {
   // Using testimonials data from constants
   const testimonials = TESTIMONIALS_DATA;
 
@@ -39,14 +39,14 @@ export default function Testimonials({ onPlayPause, isPlaying }) {
     <section className="py-6 md:py-8 px-4 relative overflow-x-hidden">
       {/* Right side shadow - half circle */}
       <div className="absolute right-0 top-1/2 transform -translate-y-1/2 z-0">
-        <div 
-          className="w-250 h-350 rounded-full" 
-          style={{ 
-            background: 'radial-gradient(circle at center, #B47DFF 0%, #8B5CF6 30%, rgba(139, 92, 246, 0.4) 60%, transparent 100%)', 
-            filter: 'blur(100px)', 
-            opacity: 0.175, 
-            transform: 'translateX(50%)' 
-          }} 
+        <div
+          className="w-250 h-350 rounded-full"
+          style={{
+            background: 'radial-gradient(circle at center, #B47DFF 0%, #8B5CF6 30%, rgba(139, 92, 246, 0.4) 60%, transparent 100%)',
+            filter: 'blur(100px)',
+            opacity: 0.175,
+            transform: 'translateX(50%)'
+          }}
         ></div>
       </div>
 

@@ -36,7 +36,7 @@ export default function CaseStudies() {
       logo: '/magal.svg', 
       description: 'Luxury jewelry brand',
       testimonial: '"Our conversion rates increased by 45% after implementing Videomate videos."',
-      videoUrl: ' ',
+      videoUrl: 'https://www.loom.com/share/e26951bec2b3494f9efa31ba9a715f59?sid=9e4d8645-46eb-48cf-8a51-d5ab1461219b ',
       stars: 5
     },
     {
@@ -45,7 +45,7 @@ export default function CaseStudies() {
       logo: '/minicaption.svg', 
       description: 'YouTuber',
       testimonial: '"Videomate delivered high-quality content that perfectly aligned with our brand voice."',
-      videoUrl: 'https://grtomatemedia.b-cdn.net/philippe%20testimonial.mp4',
+      videoUrl: 'https://www.loom.com/share/e26951bec2b3494f9efa31ba9a715f59?sid=9e4d8645-46eb-48cf-8a51-d5ab1461219b',
       stars: 5
     },
     {
@@ -54,7 +54,7 @@ export default function CaseStudies() {
       logo: '/Thera.svg', 
       description: 'Health tech innovator',
       testimonial: '"The team at Videomate understood our complex product and communicated it clearly."',
-      videoUrl: 'https://grtomatemedia.b-cdn.net/philippe%20testimonial.mp4',
+      videoUrl: 'https://www.loom.com/share/e26951bec2b3494f9efa31ba9a715f59?sid=9e4d8645-46eb-48cf-8a51-d5ab1461219b',
       stars: 5
     },
     {
@@ -63,7 +63,7 @@ export default function CaseStudies() {
       logo: '/stately.svg', // Changed from null to a path
       description: 'Social media agency',
       testimonial: '"Working with Videomate streamlined our entire video production process."',
-      videoUrl: 'https://grtomatemedia.b-cdn.net/philippe%20testimonial.mp4',
+      videoUrl: 'https://www.loom.com/share/e26951bec2b3494f9efa31ba9a715f59?sid=9e4d8645-46eb-48cf-8a51-d5ab1461219b',
       stars: 5
     }
   ];

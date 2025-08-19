@@ -24,7 +24,7 @@ export default function PortfolioPage() {
       videos: [
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%204.mp4', thumbnail: '/portfolioThumbnails/Facebook-2.webp' },
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%201.mp4', thumbnail: '/portfolioThumbnails/Facebook-1.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/3.mp4', thumbnail: '/portfolioThumbnails/Facebook-3.webp' },
+        {src:'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%203.mp4', thumbnail:'/portfolioThumbnails/Facebook-3.webp'},
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/4.mp4', thumbnail: '/portfolioThumbnails/Facebook-4.webp' },
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/Facebook%20Ads/FB%20ad%205.mp4', thumbnail: '/portfolioThumbnails/Facebook-5.webp' },
       ],
@@ -33,9 +33,9 @@ export default function PortfolioPage() {
       aspectRatio: '9:16',
       videos: [
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonilas%203.mp4', thumbnail: '/portfolioThumbnails/Testimonials-1.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonilas%201.mp4', thumbnail: '/portfolioThumbnails/Testimonials-2.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/Growgo.mp4', thumbnail: '/portfolioThumbnails/Testimonials-2.webp' },
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/testimonials%204.mp4', thumbnail: '/portfolioThumbnails/Testimonials-3.webp' },
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/UGC%2001.mp4', thumbnail: '/portfolioThumbnails/Testimonials-4.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/vueswiss.mp4', thumbnail: '/portfolioThumbnails/Testimonials-4.webp' },
         { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/User%20Testimonials/UGC%2003.mp4', thumbnail: '/portfolioThumbnails/Testimonials-5.webp' },
       ],
     },
@@ -98,7 +98,7 @@ export default function PortfolioPage() {
     VSL: {
       aspectRatio: '16:9',
       videos: [
-        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/VSL/VSL.mp4', thumbnail: '/portfolioThumbnails/VSL.webp' },
+        { src: 'https://grtomatemedia.b-cdn.net/Portfolio%20Videomate/VSL/VSL%20Final%20compressed.mp4', thumbnail: '/portfolioThumbnails/VSL.webp' },
       ],
     },
    
