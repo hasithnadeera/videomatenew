@@ -52,6 +52,14 @@ const Footer = memo(function Footer() {
             <p className={`hidden md:block text-sm leading-relaxed ${isBlogPage ? 'text-black' : 'text-white'}`}>
               © 2025 Videomate — World-class edits at Asia-smart prices.
             </p>
+            <div className={`mt-4 flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm ${isBlogPage ? 'text-black' : 'text-white'}`}>
+              <a href="/" className="hover:underline">Home</a>
+              <a href="/portfolio" className="hover:underline">Portfolio</a>
+              <a href="/#testimonials" className="hover:underline">Testimonials</a>
+              <a href="/#FAQ" className="hover:underline">FAQs</a>
+              <a href="/blog" className="hover:underline">Blog</a>
+              <a href="/our-story" className="hover:underline">Our Story</a>
+            </div>
           </div>
         </div>
       </div>

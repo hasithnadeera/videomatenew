@@ -36,7 +36,7 @@ export default function CaseStudies() {
       logo: '/magal.svg', 
       description: 'Luxury jewelry brand',
       testimonial: '"Our conversion rates increased by 45% after implementing Videomate videos."',
-      videoUrl: 'https://www.loom.com/share/e26951bec2b3494f9efa31ba9a715f59?sid=9e4d8645-46eb-48cf-8a51-d5ab1461219b ',
+      videoUrl: 'https://www.loom.com/share/b318c86fb12844feb4a194a7461fa916?sid=b1fd4691-d26c-46ad-886b-36a7a32fa949 ',
       stars: 5
     },
     {
@@ -45,7 +45,7 @@ export default function CaseStudies() {
       logo: '/minicaption.svg', 
       description: 'YouTuber',
       testimonial: '"Videomate delivered high-quality content that perfectly aligned with our brand voice."',
-      videoUrl: 'https://www.loom.com/share/e26951bec2b3494f9efa31ba9a715f59?sid=9e4d8645-46eb-48cf-8a51-d5ab1461219b',
+      videoUrl: 'https://www.loom.com/share/206c3ada10cd40fca272521a0fe58069?sid=0b16433b-f85d-4c0c-90b1-c9d2ce4a17ae',
       stars: 5
     },
     {
@@ -54,7 +54,7 @@ export default function CaseStudies() {
       logo: '/Thera.svg', 
       description: 'Health tech innovator',
       testimonial: '"The team at Videomate understood our complex product and communicated it clearly."',
-      videoUrl: 'https://www.loom.com/share/e26951bec2b3494f9efa31ba9a715f59?sid=9e4d8645-46eb-48cf-8a51-d5ab1461219b',
+      videoUrl: 'https://www.loom.com/share/143f155c22f34ae4a669f2552b6c2d50?sid=7a98847a-6651-4171-baad-0d39d5f36ee8',
       stars: 5
     },
     {
@@ -63,7 +63,7 @@ export default function CaseStudies() {
       logo: '/stately.svg', // Changed from null to a path
       description: 'Social media agency',
       testimonial: '"Working with Videomate streamlined our entire video production process."',
-      videoUrl: 'https://www.loom.com/share/e26951bec2b3494f9efa31ba9a715f59?sid=9e4d8645-46eb-48cf-8a51-d5ab1461219b',
+      videoUrl: 'https://www.loom.com/share/1acf88c7b08846069967d423d3e897a0?sid=94a6c402-346b-42f8-9677-df3f208723c3',
       stars: 5
     }
   ];
