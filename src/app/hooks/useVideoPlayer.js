@@ -2,6 +2,7 @@ import { useState, useRef, useCallback } from 'react';
 
 export default function useVideoPlayer() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [hasStarted, setHasStarted] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
   const videoRef = useRef(null);
@@ -9,6 +10,10 @@ export default function useVideoPlayer() {
   const togglePlay = useCallback(() => {
     if (!videoRef.current) return;
     
+    if (!hasStarted) {
+      setHasStarted(true);
+    }
+
     try {
       if (isPlaying) {
         videoRef.current.pause();
@@ -19,7 +24,7 @@ export default function useVideoPlayer() {
     } catch (err) {
       setError(err);
     }
-  }, [isPlaying]);
+  }, [isPlaying, hasStarted]);
   
   const handleLoadedData = useCallback(() => {
     setIsLoading(false);
@@ -33,6 +38,7 @@ export default function useVideoPlayer() {
   return {
     videoRef,
     isPlaying,
+    hasStarted,
     isLoading,
     error,
     togglePlay,

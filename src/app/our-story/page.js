@@ -14,45 +14,57 @@ export default function OurStoryPage() {
               Our Story
             </span>
           </h1>
-          <p className="text-lg text-whit">
+          <p className="text-lg text-white">
             Videomate was founded with a simple mission: to help businesses create amazing videos that tell their stories.
           </p>
         </div>
 
         <section className="mt-12">
-          <div className="relative">
-            <div className="border-l-2 border-gray-200 ml-6">
-              <div className="mb-10 ml-6">
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-purple rounded-full -left-3 ring-8 ring-[#E2CDFF]">
-                  <svg className="w-3 h-3 text-blue-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20">
+          <div className="max-w-2xl mx-auto">
+            <div className="flex">
+              <div className="flex flex-col items-center mr-6">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-purple ring-4 ring-[#E2CDFF] flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z" />
                     <path d="M0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                   </svg>
-                </span>
-                <h3 className="flex items-center mb-1 text-lg font-semibold text-white">The Idea</h3>
-                <time className="block mb-2 text-sm font-normal leading-none text-gray-400">2020</time>
-                <p className="mb-4 text-base font-normal text-white">Our founder, a passionate video editor and marketer, saw a gap in the market for a reliable and affordable video editing service.</p>
+                </div>
+                <div className="flex-grow w-px bg-white"></div>  
               </div>
-              <div className="mb-10 ml-6">
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-purple rounded-full -left-3 ring-8 ring-[#E2CDFF]">
-                  <svg className="w-3 h-3 text-blue-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20">
+              <div className="pb-8">
+                <h3 className="mb-1 text-lg font-semibold text-white">The Idea</h3>
+                <time className="block mb-2 text-sm font-normal leading-none text-purple-300">2020</time>
+                <p className="text-base font-normal text-white">Our founder, a passionate video editor and marketer, saw a gap in the market for a reliable and affordable video editing service.</p>
+              </div>
+            </div>
+            <div className="flex">
+              <div className="flex flex-col items-center mr-6">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-purple ring-4 ring-[#E2CDFF] flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z" />
                     <path d="M0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                   </svg>
-                </span>
+                </div>
+                <div className="flex-grow w-px bg-gray-300"></div>
+              </div>
+              <div className="pb-8">
                 <h3 className="mb-1 text-lg font-semibold text-white">Launch</h3>
-                <time className="block mb-2 text-sm font-normal leading-none text-gray-400">2021</time>
+                <time className="block mb-2 text-sm font-normal leading-none text-purple-300">2021</time>
                 <p className="text-base font-normal text-white">Videomate was officially launched, offering a subscription-based video editing service to businesses of all sizes.</p>
               </div>
-              <div className="ml-6">
-                <span className="absolute flex items-center justify-center w-6 h-6 bg-purple rounded-full -left-3 ring-8 ring-[#E2CDFF]">
-                  <svg className="w-3 h-3 text-blue-800" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 20 20">
+            </div>
+            <div className="flex">
+              <div className="flex flex-col items-center mr-6">
+                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-purple ring-4 ring-[#E2CDFF] flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M20 4a2 2 0 0 0-2-2h-2V1a1 1 0 0 0-2 0v1h-3V1a1 1 0 0 0-2 0v1H6V1a1 1 0 0 0-2 0v1H2a2 2 0 0 0-2 2v2h20V4Z" />
                     <path d="M0 18a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8H0v10Zm5-8h10a1 1 0 0 1 0 2H5a1 1 0 0 1 0-2Z" />
                   </svg>
-                </span>
+                </div>
+              </div>
+              <div>
                 <h3 className="mb-1 text-lg font-semibold text-white">Growth</h3>
-                <time className="block mb-2 text-sm font-normal leading-none text-gray-400">Present</time>
+                <time className="block mb-2 text-sm font-normal leading-none text-purple-300">Present</time>
                 <p className="text-base font-normal text-white">Today, we have a team of talented editors and have helped hundreds of businesses create high-quality videos.</p>
               </div>
             </div>
@@ -63,22 +75,22 @@ export default function OurStoryPage() {
           <h2 className="text-3xl font-bold mb-8">Meet the Team</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="p-4">
-              <Image src="/mahesh.webp" alt="Team Member 1" width={150} height={150} className="rounded-4xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
+              <Image src="/mahesh.webp" alt="Team Member 1" width={150} height={150} className="rounded-3xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
               <h3 className="text-xl font-semibold">Mahesh Aluthge</h3>
               <p className="text-gray-500">Founder & CEO</p>
             </div>
             <div className="p-4">
-              <Image src="/mahesh.webp" alt="Team Member 2" width={150} height={150} className="rounded-4xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
+              <Image src="/Hasith.webp" alt="Team Member 2" width={150} height={150} className="rounded-3xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
               <h3 className="text-xl font-semibold">Hasith Nadeera</h3>
               <p className="text-gray-500">Head of Operations</p>
             </div>
             <div className="p-4">
-              <Image src="/achala.webp" alt="Team Member 3" width={150} height={150} className="rounded-4xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
+              <Image src="/achala.webp" alt="Team Member 3" width={150} height={150} className="rounded-3xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
               <h3 className="text-xl font-semibold">Achala Nuwandika</h3>
               <p className="text-gray-500">Animator</p>
             </div>
             <div className="p-4">
-              <Image src="/mahesh.webp" alt="Team Member 4" width={150} height={150} className="rounded-4xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
+              <Image src="/Lasika.webp" alt="Team Member 4" width={150} height={150} className="rounded-3xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
               <h3 className="text-xl font-semibold">Lasika Nimesh</h3>
               <p className="text-gray-500">Marketing Director</p>
             </div>

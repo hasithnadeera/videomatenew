@@ -1,8 +1,8 @@
 'use client';
-import React from 'react';
+import React, { forwardRef } from 'react';
 import PropTypes from 'prop-types';
 
-const VideoPlayer = ({ src, title = 'Embedded Video' }) => {
+const VideoPlayer = forwardRef(({ src, poster, title = 'Embedded Video', hasStarted }, ref) => {
   if (!src) {
     return (
       <div className="bg-gray-200 aspect-video rounded-2xl flex items-center justify-center">
@@ -12,21 +12,28 @@ const VideoPlayer = ({ src, title = 'Embedded Video' }) => {
   }
 
   return (
-    <div style={{position:'relative',paddingTop:'56.25%'}}>
-      <iframe 
-        src={`${src}?rel=0&autoplay=1&mute=1`}
-        style={{border:0,position:'absolute',top:0,height:'100%',width:'100%', borderRadius: '1rem'}}
-        allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-        allowFullScreen={true}
+    <div className="relative w-full h-full" style={{ paddingTop: '56.25%' }}>
+      <video
+        ref={ref}
+        src={src}
+        poster={poster}
+        className="absolute top-0 left-0 w-full h-full rounded-2xl"
+        style={{ objectFit: 'cover' }}
         title={title}
-      ></iframe>
+        playsInline
+        controls={hasStarted}
+      />
     </div>
   );
-};
+});
+
+VideoPlayer.displayName = 'VideoPlayer';
 
 VideoPlayer.propTypes = {
   src: PropTypes.string.isRequired,
+  poster: PropTypes.string,
   title: PropTypes.string,
+  hasStarted: PropTypes.bool,
 };
 
 export default VideoPlayer;

@@ -1,8 +1,15 @@
+"use client";
 import Image from 'next/image';
 import VideoPlayer from './VideoPlayer';
+import useVideoPlayer from '../hooks/useVideoPlayer';
 
 export default function Hero() {
-
+  const {
+    videoRef,
+    isPlaying,
+    hasStarted,
+    togglePlay,
+  } = useVideoPlayer();
 
   return (
     <section className="w-full flex flex-col items-center justify-center px-8 pt-34 md:pt-36 bg-transparent">
@@ -17,7 +24,28 @@ export default function Hero() {
         Videomate edits your videos in 24–48 hours. One flat rate. No surprises.
       </p>
       <div className="w-full max-w-4xl mx-auto relative bg-transparent rounded-2xl shadow-2xl shadow-purple-500/15">
-        <VideoPlayer src="https://iframe.mediadelivery.net/embed/345790/22f09b6a-611d-4a3b-be44-a9c177e099fa?autoplay=false&loop=false&muted=false&preload=false&responsive=true" title="Videomate Promotional Video" />
+        <VideoPlayer
+          ref={videoRef}
+          src="https://grtomatemedia.b-cdn.net/Videomate%20VSL1.mp4"
+          poster="/vslThumbnail.webp"
+          title="Videomate Promotional Video"
+          hasStarted={hasStarted}
+        />
+        {!hasStarted && (
+          <button
+            className="absolute inset-0 flex items-center justify-center transition-opacity duration-300"
+            onClick={togglePlay}
+            onKeyDown={(e) => e.key === 'Enter' && togglePlay()}
+            aria-label="Play video"
+            tabIndex={0}
+          >
+            <div className="w-10 h-10 md:w-12 md:h-12 bg-white/10 backdrop-blur-md border border-white/20 rounded-full flex items-center justify-center hover:bg-white/20 hover:border-white/30 transition-all duration-300 shadow-lg">
+              <svg className="w-4 h-4 md:w-5 md:h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M6.3 2.841A1.5 1.5 0 004 4.11v11.78a1.5 1.5 0 002.3 1.269l9.344-5.89a1.5 1.5 0 000-2.538L6.3 2.84z" />
+              </svg>
+            </div>
+          </button>
+        )}
       </div>
       {/* CTA Button */}
       <a

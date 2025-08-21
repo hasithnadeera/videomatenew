@@ -41,7 +41,7 @@ export default function CallBookingPage() {
       <Navbar/>
       <div 
         className="mt-32 mb-[0px] md:mb-[-80px] md:mt-20 calendly-inline-widget"
-        data-url="https://calendly.com/videomatecreators/book-a-call-earn-views"
+        data-url="https://calendly.com/videomatecreators/book-a-call-earn-views?hide_gdpr_banner=1"
         style={{ minWidth: "320px", height: "700px" }}
       ></div>
       <CaseStudies/>
