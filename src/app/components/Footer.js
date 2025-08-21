@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import { memo } from 'react';
+import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import SocialIcon from './SocialIcon';
 import { SOCIAL_ICONS } from '../constants';
@@ -53,12 +54,12 @@ const Footer = memo(function Footer() {
               © 2025 Videomate — World-class edits at Asia-smart prices.
             </p>
             <div className={`mt-4 flex flex-wrap justify-center md:justify-end gap-x-6 gap-y-2 text-sm ${isBlogPage ? 'text-black' : 'text-white'}`}>
-              <a href="/" className="hover:underline">Home</a>
-              <a href="/portfolio" className="hover:underline">Portfolio</a>
-              <a href="/#testimonials" className="hover:underline">Testimonials</a>
-              <a href="/#FAQ" className="hover:underline">FAQs</a>
-              <a href="/blog" className="hover:underline">Blog</a>
-              <a href="/our-story" className="hover:underline">Our Story</a>
+              <Link href="/" className="hover:underline">Home</Link>
+              <Link href="/portfolio" className="hover:underline">Portfolio</Link>
+              <Link href="/#testimonials" className="hover:underline">Testimonials</Link>
+              <Link href="/#FAQ" className="hover:underline">FAQs</Link>
+              <Link href="/blog" className="hover:underline">Blog</Link>
+              <Link href="/our-story" className="hover:underline">Our Story</Link>
             </div>
           </div>
         </div>
