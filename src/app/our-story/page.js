@@ -82,17 +82,17 @@ export default function OurStoryPage() {
             <div className="p-4">
               <Image src="/Hasith.webp" alt="Team Member 2" width={150} height={150} className="rounded-3xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
               <h3 className="text-xl font-semibold">Hasith Nadeera</h3>
-              <p className="text-gray-500">Head of Operations</p>
+              <p className="text-gray-500">Operational Manager</p>
             </div>
             <div className="p-4">
               <Image src="/achala.webp" alt="Team Member 3" width={150} height={150} className="rounded-3xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
               <h3 className="text-xl font-semibold">Achala Nuwandika</h3>
-              <p className="text-gray-500">Animator</p>
+              <p className="text-gray-500">Finance & HR Manager</p>
             </div>
             <div className="p-4">
               <Image src="/Lasika.webp" alt="Team Member 4" width={150} height={150} className="rounded-3xl mx-auto mb-4 shadow-[0_0_100px_rgba(180,125,255,0.4)]" />
               <h3 className="text-xl font-semibold">Lasika Nimesh</h3>
-              <p className="text-gray-500">Marketing Director</p>
+              <p className="text-gray-500">Marketing Manager</p>
             </div>
           </div>
         </section>
