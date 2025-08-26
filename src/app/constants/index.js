@@ -81,13 +81,13 @@ export const TESTIMONIAL_STYLES = {
 
 // Social icons data
 export const SOCIAL_ICONS = [
-  { name: 'X (Twitter)', icon: '/icons/twitter.svg', url: 'https://twitter.com/videomate' },
-  { name: 'LinkedIn', icon: '/icons/linkedin.svg', url: 'https://linkedin.com/company/videomate' },
-  { name: 'YouTube', icon: '/icons/youtube.svg', url: 'https://youtube.com/c/videomate' },
-  { name: 'Instagram', icon: '/icons/instagram.svg', url: 'https://instagram.com/videomate' },
-  { name: 'Facebook', icon: '/icons/facebook.svg', url: 'https://facebook.com/videomate' },
-  { name: 'TikTok', icon: '/icons/tiktok.svg', url: 'https://tiktok.com/@videomate' },
-  { name: 'WhatsApp', icon: '/icons/whatsapp.svg', url: 'https://wa.me/message/videomate' }
+  { name: 'X (Twitter)', icon: '/icons/twitter.svg', url: '' },
+  { name: 'LinkedIn', icon: '/icons/linkedin.svg', url: '' },
+  { name: 'YouTube', icon: '/icons/youtube.svg', url: '' },
+  { name: 'Instagram', icon: '/icons/instagram.svg', url: '' },
+  { name: 'Facebook', icon: '/icons/facebook.svg', url: 'https://www.facebook.com/videomate.io' },
+  { name: 'TikTok', icon: '/icons/tiktok.svg', url: '' },
+  { name: 'WhatsApp', icon: '/icons/whatsapp.svg', url: '' }
 ];
 
 // Testimonials data
