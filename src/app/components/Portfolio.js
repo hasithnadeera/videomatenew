@@ -54,37 +54,33 @@ export default function Portfolio() {
             }`}
         >
           {/* Repeat the GIF multiple times for the scrolling effect */}
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Thera_Sampal-01_3_ed17y3_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Wegovy_eufixx_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/5.Smart_People_Take_This_hp0o1a-loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/11_ticzaj_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Fannie_mae_1_mbjtldloop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Ali_Abdaal_Style_daummp-loop.gif" />         
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Kenton_ovtxqw_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Tyler_Scott_Win_1_zbonux_loop.gif" />
-          
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Thera_Sampal-01_3_ed17y3_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Wegovy_eufixx_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/5.Smart_People_Take_This_hp0o1a-loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/11_ticzaj_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Fannie_mae_1_mbjtldloop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Ali_Abdaal_Style_daummp-loop.gif" />         
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Kenton_ovtxqw_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Tyler_Scott_Win_1_zbonux_loop.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/5.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/7.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/1.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/8.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/3.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/2.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/4.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/6.gif" />     
 
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Thera_Sampal-01_3_ed17y3_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Wegovy_eufixx_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/5.Smart_People_Take_This_hp0o1a-loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/11_ticzaj_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Fannie_mae_1_mbjtldloop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Ali_Abdaal_Style_daummp-loop.gif" />         
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Kenton_ovtxqw_loop.gif" />
-          <GifCard src="https://grtomatemedia.b-cdn.net/gifs/Tyler_Scott_Win_1_zbonux_loop.gif" />
-          
-          
-          
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/5.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/7.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/1.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/8.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/3.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/2.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/4.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/6.gif" />  
 
-       
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/5.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/7.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/1.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/8.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/3.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/2.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/4.gif" />
+          <GifCard src="https://grtomatemedia.b-cdn.net/newgifs/6.gif" />      
+          
         </div>
       </div>
     </div>

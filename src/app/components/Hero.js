@@ -26,7 +26,7 @@ export default function Hero() {
       <div className="w-full max-w-4xl mx-auto relative bg-transparent rounded-2xl shadow-2xl shadow-purple-500/15">
         <VideoPlayer
           ref={videoRef}
-          src="https://grtomatemedia.b-cdn.net/Videomate%20VSL1.mp4"
+          src="https://grtomatemedia.b-cdn.net/videomate%20VSL.mp4"
           poster="/vslThumbnail.webp"
           title="Videomate Promotional Video"
           hasStarted={hasStarted}
