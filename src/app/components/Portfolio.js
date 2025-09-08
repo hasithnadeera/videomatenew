@@ -44,10 +44,6 @@ export default function Portfolio() {
         onTouchEnd={handleInteractionEnd}
         onMouseDown={handleInteractionStart}
         onMouseUp={handleInteractionEnd}
-        style={{
-          scrollbarWidth: 'none',
-          msOverflowStyle: 'none'
-        }}
       >
         <div
           className={`flex space-x-8 px-6 w-max ${isUserInteracting ? '' : 'animate-scroll-rtl'
@@ -106,10 +102,6 @@ const GifCard = ({ src }) => {
         width={215}
         height={382}
         onError={handleError}
-        style={{
-          imageRendering: 'auto',
-          animation: 'none'
-        }}
       />
       
       {/* Error State Only */}
