@@ -11,105 +11,42 @@ const poppins = Poppins({
   display: "swap",
 });
 
-// --- SEO defaults for the whole site ---
 export const metadata = {
-  // Make sure this matches your canonical host (no typos)
   metadataBase: new URL("https://www.videomate.io"),
-
-  title: {
-    default: "Videomate | Unlimited Video Editing Platform",
-    template: "%s | Videomate",
-  },
-  description:
-    "Videomate is a video editing platform that drives ROI with UGC, MGFX, and fast iteration.",
+  title: { default: "Videomate | Unlimited Video Editing Platform", template: "%s | Videomate" },
+  description: "Videomate is a video editing platform that drives ROI with UGC, MGFX, and fast iteration.",
   robots: { index: true, follow: true },
-
-  // Canonical for root; set page-specific canonicals in each page's metadata
   alternates: { canonical: "/" },
-
   openGraph: {
     type: "website",
     url: "https://www.videomate.io",
     siteName: "Videomate",
     title: "Videomate | Unlimited Video Editing Platform",
-    description:
-      "Video editing that drives ROI. UGC, MGFX, and fast iteration.",
+    description: "Video editing that drives ROI. UGC, MGFX, and fast iteration.",
     images: ["/og.png"],
   },
   twitter: {
     card: "summary_large_image",
     title: "Videomate | Unlimited Video Editing Platform",
-    description:
-      "Video editing that drives ROI. UGC, MGFX, and fast iteration.",
+    description: "Video editing that drives ROI. UGC, MGFX, and fast iteration.",
     images: ["/og.png"],
   },
 };
 
 export default function RootLayout({ children }) {
-  const schemaData = [
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      name: "Videomate",
-      url: "https://videomate.io",
-      logo: "https://videomate.io/logo.png",
-      image: "https://videomate.io/og.png",
-      description:
-        "Videomate is a video production and marketing agency based in Sri Lanka, serving clients across Australia, the United States, and worldwide.",
-      telephone: "+94 766040568",
-      priceRange: "$$",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "2nd Floor, 150 Panadura Road",
-        addressLocality: "Horana",
-        addressRegion: "Western Province",
-        postalCode: "12400",
-        addressCountry: "LK",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 6.717443,
-        longitude: 80.0593213,
-      },
-      areaServed: ["United States", "Australia", "Global"],
-      sameAs: [
-        "https://www.facebook.com/videomateio",
-        "https://x.com/videomate_io",
-      ],
-      contactPoint: {
-        "@type": "ContactPoint",
-        contactType: "customer service",
-        areaServed: ["US", "AU", "Global"],
-        availableLanguage: ["English"],
-      },
-    },
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      name: "Videomate",
-      url: "https://videomate.io",
-      logo: "https://videomate.io/logo.png",
-      sameAs: [
-        "https://www.facebook.com/videomateio",
-        "https://x.com/videomate_io",
-      ],
-      description:
-        "Videomate is a global video editing and production platform delivering UGC, MGFX, and fast iteration services.",
-    },
-  ];
+  const schemaData = [/* … your schema objects … */];
 
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* JSON-LD */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
-        {/* Optional: viewport (Next can infer, but explicit is fine) */}
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-      </head>
-      <body className={`${poppins.variable} font-poppins antialiased`}>
-        {/* Google Tag Manager */}
+
+        {/* Google Tag Manager – put this in <head> */}
         <script
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -119,11 +56,21 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-NKC4RGC6');`,
           }}
         />
-        {/* End Google Tag Manager */}
-        {/* Google Tag Manager (noscript) */}
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKC4RGC6"
-height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></noscript>
-        {/* End Google Tag Manager (noscript) */}
+        {/* End GTM */}
+      </head>
+
+      <body className={`${poppins.variable} font-poppins antialiased`}>
+        {/* GTM (noscript) – must be raw HTML, not JSX */}
+        <div
+          dangerouslySetInnerHTML={{
+            __html: `
+<noscript>
+  <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKC4RGC6"
+          height="0" width="0" style="display:none;visibility:hidden"></iframe>
+</noscript>`,
+          }}
+        />
+        {/* End GTM (noscript) */}
 
         <ClientWrapper>
           {children}
@@ -134,4 +81,3 @@ height="0" width="0" style={{display:'none',visibility:'hidden'}}></iframe></nos
     </html>
   );
 }
-
