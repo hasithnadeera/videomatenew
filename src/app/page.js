@@ -11,6 +11,7 @@ import Features from "./components/Features";
 import HowItWorks from "./components/HowItWorks";
 import CaseStudies from "./components/caseStudies";
 import PricingSection from "./components/PricingSection";
+import NewPricing from "./components/newpricing";
 import Testimonials from "./components/Testimonials";
 
 import FAQ from "./components/FAQ";
@@ -32,6 +33,7 @@ export default function Home() {
         <HowItWorks />
         <CaseStudies />
         <PricingSection />
+        <NewPricing/>
         <div id="testimonials">
           <Testimonials />
         </div>

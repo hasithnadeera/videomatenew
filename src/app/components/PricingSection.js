@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import ComparisonCard from './ComparisonCard';
 import { COMPARISON_DATA } from '../constants';
+import NewPricing from "./newpricing";
 
 export default function PricingSection() {
   const [touchStart, setTouchStart] = useState(0);
@@ -396,72 +397,7 @@ export default function PricingSection() {
             </button>
 
           </div>
-          {/* New Pricing Cards Section */}
-          <div className="flex justify-center mt-16">
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {/* Card 1 */}
-              <div
-                className="relative backdrop-blur-xl rounded-4xl p-4 sm:p-6 md:p-8 border border-purple-400/20 md:scale-95 z-10 shadow-xl overflow-hidden cursor-pointer h-96 flex flex-col justify-center"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05))',
-                  backdropFilter: 'blur(20px)'
-                }}
-              >
-                <div className="text-center">
-                  <h3 className="text-3xl font-bold text-white mt-30 mb-16">1 short-form video per month</h3>
-                  <div className="flex items-baseline justify-center mb-2 mt-4">
-                    <span className="text-3xl sm:text-4xl md:text-5xl font-bold  text-white">$47</span>
-                  </div>
-                  <p className="text-lg text-gray-400 line-through">$97</p>
-                </div>
-                <h3 className="text-lg text-center font-regular text-white mb-18">Get your first video done 50% off.</h3>
-              </div>
-              {/* Card 2 */}
-              <div
-                className="relative backdrop-blur-xl rounded-4xl p-4 sm:p-6 md:p-8 border border-purple-400/20 md:scale-95 z-10 shadow-xl overflow-hidden cursor-pointer h-96 flex flex-col justify-center"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05))',
-                  backdropFilter: 'blur(20px)'
-                }}
-              >
-                {/* Most Popular Badge */}
-                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <span className="bg-gradient-to-r from-[#B47DFF] to-[#8F5CFF] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                    Most Popular
-                  </span>
-                </div>
-                <div className="text-center">
-                  <h3 className="text-3xl font-bold text-white mb-18">8 videos per month</h3>
-                  <div className="flex items-baseline justify-center mb-2 mt-4">
-                    <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">$697</span>
-                  </div>
-                  <p className="text-lg text-gray-400"><span className="line-through">$776</span> <span className="text-purple-300 font-bold ml-2">10% off</span></p>
-                </div>
-              </div>
-              {/* Card 3 */}
-              <div
-                className="relative backdrop-blur-xl rounded-4xl p-4 sm:p-6 md:p-8 border border-[#CFADFF]/30 md:scale-95 shadow-xl overflow-hidden cursor-pointer h-96 flex flex-col justify-center"
-                style={{
-                  background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05))',
-                  backdropFilter: 'blur(20px)'
-                }}
-              >
-                {/* Best Value Badge */}
-                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20">
-                  <span className="bg-gradient-to-r from-[#B47DFF] to-[#8F5CFF] text-white text-xs font-bold px-3 py-1 rounded-full shadow-lg">
-                    Best Value
-                  </span>
-                </div>
-                <div className="text-center">
-                  <h3 className="text-3xl font-bold text-white mb-18">30 videos per month</h3>
-                  <div className="flex items-baseline justify-center mb-2">
-                    <span className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">$2247</span>
-                  </div>
-                  <p className="text-lg text-gray-400"><span className="line-through">$2910</span> <span className="text-purple-300 font-bold ml-2">22% off</span></p>
-                </div>
-              </div>
-            </div>
-          </div>
+        <NewPricing/>
           {/* CFO Comparison Section */}
           <div className="flex flex-col items-center justify-center relative mt-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Why so affordable?</h2>
