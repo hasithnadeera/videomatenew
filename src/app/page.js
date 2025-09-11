@@ -33,10 +33,10 @@ export default function Home() {
         <HowItWorks />
         <CaseStudies />
         <PricingSection />
-        <NewPricing/>
         <div id="testimonials">
           <Testimonials />
         </div>
+        
         <div id="FAQ">
           <FAQ />
         </div>

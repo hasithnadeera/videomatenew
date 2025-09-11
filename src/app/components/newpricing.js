@@ -59,7 +59,7 @@ export default function NewPricing() {
 
   return (
     <div className="flex flex-col items-center justify-center mt-16">
-      <h2 className="text-3xl md:text-5xl font-bold text-white mb-12">
+      <h2 className="text-2xl md:text-4xl font-bold text-purple-100 mb-12">
         Need Pay-Per-Video Bundle?
       </h2>
       

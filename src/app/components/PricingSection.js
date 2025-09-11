@@ -394,9 +394,9 @@ export default function PricingSection() {
                 Start 7-Day Free Trial
               </a>
             </button>
-
+            
           </div>
-        <NewPricing/>
+          <NewPricing />
           {/* CFO Comparison Section */}
           <div className="flex flex-col items-center justify-center relative mt-12">
             <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center">Why so affordable?</h2>
