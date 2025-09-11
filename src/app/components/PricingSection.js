@@ -272,7 +272,6 @@ export default function PricingSection() {
                 ))}
               </div>
 
-              {/* No navigation dots needed for side-by-side layout */}
             </div>
           </div>
 

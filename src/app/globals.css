@@ -110,3 +110,10 @@ body {
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
 }
+.text-gradient {
+  background: linear-gradient(to bottom, #E2CDFF, #B47DFF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
