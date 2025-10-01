@@ -57,7 +57,7 @@ const TermsAndConditions = () => {
               <p className="mb-2"><strong className="font-semibold">Who is this for?</strong> Creators who want to test our service with a single video before committing.</p>
               <p className="mb-2"><strong className="font-semibold">Outcome:</strong> Get a polished, ready-to-post video with captions and fast turnaround.</p>
               <p className="mb-2"><strong className="font-semibold">What You Get:</strong> 1 short-form video edit. 2 free revisions. Delivered within 24-48h.</p>
-              <p className="text-xl font-bold text-green-400"> Price: Start Growing for $799/month</p>
+              <p className="text-xl font-bold text-green-400"> Price: Start Growing for $47/month</p>
             </div>
 
             <div>
@@ -66,16 +66,7 @@ const TermsAndConditions = () => {
               <p className="mb-2"><strong className="font-semibold">Outcome:</strong> Stay active online with a steady stream of quality videos each month.</p>
               <p className="mb-2"><strong className="font-semibold">What You Get:</strong> 8 edited videos.2 free revisions per video Delivered in ≤ 24h</p>
               <p className="mb-2"><strong className="font-semibold">Video Count:</strong> We'll keep 2 videos live at any given time, updated within 24h.</p>
-              <p className="text-xl font-bold text-green-400">Price: Start Growing for $1399/month </p>
-            </div>
-
-            <div>
-              <h3 className="text-2xl font-bold mb-3">Agency Package</h3>
-              <p className="mb-2"><strong className="font-semibold">Who is this for?</strong> Agencies that want to scale their client delivery without building a full in-house editing team.</p>
-              <p className="mb-2"><strong className="font-semibold">Outcome:</strong> Deliver consistent, top-tier content to your clients while focusing on growth and strategy.</p>
-              <p className="mb-2"><strong className="font-semibold">What You Get:</strong> A complete white-label video editing solution - we handle the editing, branding, and polish while you maintain the client relationship.</p>
-              <p className="mb-2"><strong className="font-semibold">Video Count:</strong> We'll keep 4 videos live and running at any given time, constantly refreshed to stay relevant and engaging.</p>
-              <p className="text-xl font-bold text-green-400">Price: Start Growing for $2499/month </p>
+              <p className="text-xl font-bold text-green-400">Price: Start Growing for $697/month </p>
             </div>
           </div>
           <p className="mt-6 text-md text-gray-400">
