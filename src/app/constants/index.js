@@ -20,6 +20,7 @@ export const GLASSMORPHISM = {
   background: 'linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05))',
   backdropFilter: 'blur(20px)',
   boxShadow: '0 8px 32px 0 rgba(31, 38, 135, 0.37)'
+  
 };
 
 // Comparison data

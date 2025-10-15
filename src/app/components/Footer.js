@@ -26,7 +26,7 @@ const Footer = memo(function Footer() {
               className="object-contain md:w-[200px] md:h-[60px]"
             />
             <div className={`mt-3 md:mt-2 text-xs md:text-sm text-center md:text-left ${isBlogPage ? 'text-black' : 'text-white'}`}>
-              <p>2nd Floor, No 150, Panadura Road,</p>
+              <p>240/23 Rathnapura road,</p>
               <p>Horana, Sri Lanka</p>
             </div>
           </div>
@@ -41,12 +41,14 @@ const Footer = memo(function Footer() {
                   href={social.url}
                   icon={social.icon}
                   isBlogPage={isBlogPage}
+
                 />
               ))}
             </div>
             {/* Mobile: Two lines */}
             <div className={`block md:hidden text-xs leading-relaxed text-center ${isBlogPage ? 'text-black' : 'text-white'}`}>
               <p>© 2025 Videomate</p>
+
               <p>World-class edits at Asia-smart prices.</p>
             </div>
             {/* Desktop: One line */}
@@ -60,6 +62,7 @@ const Footer = memo(function Footer() {
               <Link href="/#FAQ" className="hover:underline">FAQs</Link>
               <Link href="/blog" className="hover:underline">Blog</Link>
               <Link href="/our-story" className="hover:underline">Our Story</Link>
+              <Link href="/terms-and-conditions" className="hover:underline">Terms and Conditions</Link>
             </div>
           </div>
         </div>
