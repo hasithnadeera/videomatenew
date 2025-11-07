@@ -23,7 +23,7 @@ export default function Hero() {
       <p className="w-full text-xs md:text-lg text-center text-white mt-2 mb-6 md:mb-8">
         Videomate edits your videos in 24–48 hours. One flat rate. No surprises.
       </p>
-      <div className="w-full max-w-4xl mx-auto relative bg-transparent rounded-2xl shadow-2xl shadow-purple-500/15">
+      {/*<div className="w-full max-w-4xl mx-auto relative bg-transparent rounded-2xl shadow-2xl shadow-purple-500/15">
         <VideoPlayer
           ref={videoRef}
           src="https://grtomatemedia.b-cdn.net/videomate%20VSL.mp4"
@@ -47,6 +47,7 @@ export default function Hero() {
           </button>
         )}
       </div>
+      */}
       {/* CTA Button */}
       <a
         target="_blank"
