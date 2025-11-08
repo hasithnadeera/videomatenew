@@ -9,10 +9,10 @@ export default function BlogPost({ post }) {
   return (
     <Link href={postUrl} className="block group">
       <article className="h-full bg-gray-50 backdrop-blur-xl border border-[#CFADFF]/20 rounded-2xl overflow-hidden hover:border-[#CFADFF]/40 transition-all duration-300 hover:scale-[1.02]">
-              {post.thumbnail && (
+              {post.thumbnail_url && (
                 <div className="relative h-48 w-full">
                   <Image
-                    src={post.thumbnail}
+                    src={post.thumbnail_url}
                     alt={post.title}
                     fill
                     className="object-cover"
@@ -22,10 +22,10 @@ export default function BlogPost({ post }) {
               <div className="p-6 flex flex-col h-full">
                 <div className="flex justify-between items-start mb-4">
                   <span className="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-xs font-medium">
-                    {post.category}
+                    {post.category?.name || 'Uncategorized'}
                   </span>
                   <time className="text-black text-sm">
-                    {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                    {new Date(post.published_at).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
                   </time>
                 </div>
                 

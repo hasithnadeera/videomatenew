@@ -27,16 +27,16 @@ export default function BlogPostClient({ post, relatedPosts }) {
         <header className="mb-12 text-center">
           <div className="flex flex-wrap items-center justify-center gap-4 mb-6">
                       <span className="px-4 py-2 bg-purple-100 text-purple-800 rounded-full font-medium">
-                        {post.category}
+                        {post.category?.name || 'Uncategorized'}
                       </span>
                       <time className="text-black">
-                        {new Date(post.date).toLocaleDateString('en-US', {
+                        {new Date(post.published_at).toLocaleDateString('en-US', {
                           year: 'numeric',
                           month: 'long',
                           day: 'numeric'
                         })}
                       </time>
-                      <span className="text-black">by {post.author}</span>
+                      <span className="text-black">by {post.author?.full_name || 'Anonymous'}</span>
                     </div>
           
           <h1 className="text-3xl md:text-4xl font-bold mb-6">
@@ -52,7 +52,7 @@ export default function BlogPostClient({ post, relatedPosts }) {
         
         {/* Post Content */}
         <div className="max-w-3xl mx-auto">
-          <MDXContent content={post.content} />
+          <div dangerouslySetInnerHTML={{ __html: post.html_content }} />
         </div>
         
         {/* Final Thoughts */}

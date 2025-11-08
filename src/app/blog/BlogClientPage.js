@@ -17,7 +17,7 @@ export default function BlogClientPage({ initialPosts, initialCategories, initia
                           (post.excerpt && post.excerpt.toLowerCase().includes(searchQuery.toLowerCase())) ||
                           (post.tags && post.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())));
     
-    const matchesCategory = selectedCategory === 'All' || post.category === selectedCategory;
+    const matchesCategory = selectedCategory === 'All' || post.category.name === selectedCategory;
     
     const matchesTag = !selectedTag || (post.tags && post.tags.includes(selectedTag));
     

@@ -11,7 +11,7 @@ export async function generateStaticParams() {
 export default async function TagArchivePage({ params }) {
   const allPosts = await getAllPosts();
   const filteredPosts = allPosts.filter(post => 
-    post.tags.includes(decodeURIComponent(params.tag))
+    post.tags && Array.isArray(post.tags) && post.tags.includes(decodeURIComponent(params.tag))
   );
 
   return <TagClientPage initialPosts={filteredPosts} tag={decodeURIComponent(params.tag)} />;

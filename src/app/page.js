@@ -1,5 +1,5 @@
 'use client';
-import React, { useRef } from "react";
+import React, { useRef, useEffect } from "react";
 import Image from "next/image";
 
 // Import all components
@@ -13,11 +13,23 @@ import CaseStudies from "./components/caseStudies";
 import PricingSection from "./components/PricingSection";
 import NewPricing from "./components/newpricing";
 import Testimonials from "./components/Testimonials";
-
 import FAQ from "./components/FAQ";
 import Footer from "./components/Footer";
 
 export default function Home() {
+  useEffect(() => {
+    // Handle hash-based scrolling
+    const hash = window.location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const element = document.getElementById(hash.slice(1));
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      }, 100);
+    }
+  }, []);
+
   return (
     <div className="font-sans min-h-screen bg-gradient-to-b from-[#150A28] to-black">
       <Navbar />

@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState, use } from "react";
+import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
 export default function Navbar() {
@@ -12,45 +12,31 @@ export default function Navbar() {
   const isBlogPage = pathname.startsWith('/blog');
 
   const scrollToSection = (sectionId) => {
-    // Close mobile menu if open
     if (mobileMenuOpen) {
       setMobileMenuOpen(false);
     }
     
-    // If we're not on the home page, navigate there first
     if (pathname !== '/') {
-      router.push('/');
-      // Wait for navigation to complete, then scroll
+      router.push('/' + (sectionId !== 'home' ? '#' + sectionId : ''));
       setTimeout(() => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-          window.scrollTo({
-            top: section.offsetTop - 100,
-            behavior: 'smooth'
-          });
-        } else if (sectionId === 'home') {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
+        if (sectionId === 'home') {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+          const section = document.getElementById(sectionId);
+          if (section) {
+            section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
         }
-      }, 100);
+      }, 50);
     } else {
-      // We're already on home page, just scroll
-      setTimeout(() => {
+      if (sectionId === 'home') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
         const section = document.getElementById(sectionId);
         if (section) {
-          window.scrollTo({
-            top: section.offsetTop - 100,
-            behavior: 'smooth'
-          });
-        } else if (sectionId === 'home') {
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth'
-          });
+          section.scrollIntoView({ behavior: 'smooth', block: 'start' });
         }
-      }, 100);
+      }
     }
   };
 
